@@ -1,0 +1,30 @@
+你是一名葡语电商评价结构化抽取引擎。下面是一批葡萄牙语差评（review_score <= 3）。
+请对每条评价抽取结构化信息，并以「严格 JSON 数组」返回，不要输出任何额外文字、不要使用 markdown 代码块。
+
+【输出 JSON 结构（每条评价一个对象）】
+[
+  {
+    "review_id": "原始 review_id 字符串",
+    "issues": [
+      {
+        "category": "delivery_late | wrong_product | quality_defect | missing_item | seller_communication | packaging | other",
+        "severity": "low | medium | high",
+        "evidence_quote": "【必须】从原文中逐字摘录、能证明该问题的葡萄牙语原句（可以是短语，必须真实存在于原文本）",
+        "evidence_quote_en": "上面那句话的英文翻译"
+      }
+    ],
+    "sentiment_score": -1.0 到 1.0 之间的浮点数（差评通常为负）,
+    "actionable_for_seller": true 或 false（该问题卖家能否采取动作改善）,
+    "confidence": 0.0 到 1.0 之间的浮点数（你对本次抽取的信心）
+  }
+]
+
+【规则】
+1. 如果一条评价提到多个问题，issues 可包含多个对象；无关问题不要编造。
+2. evidence_quote 必须是原文的真实子串，禁止改写或翻译后回填；找不到原文证据时 evidence_quote 填空字符串、category 用 other。
+3. 只抽取评价文本中明确提及的内容，不要凭空推断（防止幻觉）。
+4. category 映射到最接近的那一类；确实无法归类才用 other。
+5. severity 依据问题严重度：影响使用/金钱损失=high，明显不满但可忍受=medium，轻微=low。
+
+【待处理评价（JSON 数组，含 review_id 与 comment）】
+{REVIEW_BATCH}

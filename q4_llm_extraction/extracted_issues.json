@@ -1,0 +1,782 @@
+[
+  {
+    "review_id": "review_00004",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "ruim",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.2,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00014",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "ruim",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.2,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00024",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "ruim",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.2,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00034",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "ruim",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.2,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00044",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "ruim",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.2,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00054",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "ruim",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.2,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00000",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "A entrega atrasou muito, chegou depois do prazo.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00001",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Produto veio quebrado, defeito de fabrica.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00002",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "medium",
+        "evidence_quote": "Recebi o produto errado, nao era o que pedi.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00003",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "medium",
+        "evidence_quote": "Faltou um item na caixa, incompleto.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "packaging",
+        "severity": "medium",
+        "evidence_quote": "Faltou um item na caixa, incompleto.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00005",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "medium",
+        "evidence_quote": "péssimo atendimento do vendedor, sem resposta.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "péssimo atendimento do vendedor, sem resposta.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00006",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "Embalagem danificada mas o produto ok.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "packaging",
+        "severity": "low",
+        "evidence_quote": "Embalagem danificada mas o produto ok.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.2,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00007",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "medium",
+        "evidence_quote": "Demorou demais para entregar.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00010",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "A entrega atrasou muito, chegou depois do prazo.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00011",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Produto veio quebrado, defeito de fabrica.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00012",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "medium",
+        "evidence_quote": "Recebi o produto errado, nao era o que pedi.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00013",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "medium",
+        "evidence_quote": "Faltou um item na caixa, incompleto.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "packaging",
+        "severity": "medium",
+        "evidence_quote": "Faltou um item na caixa, incompleto.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00015",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "medium",
+        "evidence_quote": "péssimo atendimento do vendedor, sem resposta.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "péssimo atendimento do vendedor, sem resposta.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00016",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "Embalagem danificada mas o produto ok.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "packaging",
+        "severity": "low",
+        "evidence_quote": "Embalagem danificada mas o produto ok.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.2,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00017",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "medium",
+        "evidence_quote": "Demorou demais para entregar.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00020",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "A entrega atrasou muito, chegou depois do prazo.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00021",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Produto veio quebrado, defeito de fabrica.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00022",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "medium",
+        "evidence_quote": "Recebi o produto errado, nao era o que pedi.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00023",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "medium",
+        "evidence_quote": "Faltou um item na caixa, incompleto.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "packaging",
+        "severity": "medium",
+        "evidence_quote": "Faltou um item na caixa, incompleto.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00025",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "medium",
+        "evidence_quote": "péssimo atendimento do vendedor, sem resposta.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "péssimo atendimento do vendedor, sem resposta.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00026",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "Embalagem danificada mas o produto ok.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "packaging",
+        "severity": "low",
+        "evidence_quote": "Embalagem danificada mas o produto ok.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.2,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00027",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "medium",
+        "evidence_quote": "Demorou demais para entregar.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00030",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "A entrega atrasou muito, chegou depois do prazo.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00031",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Produto veio quebrado, defeito de fabrica.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00032",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "medium",
+        "evidence_quote": "Recebi o produto errado, nao era o que pedi.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00033",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "medium",
+        "evidence_quote": "Faltou um item na caixa, incompleto.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "packaging",
+        "severity": "medium",
+        "evidence_quote": "Faltou um item na caixa, incompleto.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00035",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "medium",
+        "evidence_quote": "péssimo atendimento do vendedor, sem resposta.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "péssimo atendimento do vendedor, sem resposta.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00036",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "Embalagem danificada mas o produto ok.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "packaging",
+        "severity": "low",
+        "evidence_quote": "Embalagem danificada mas o produto ok.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.2,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00037",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "medium",
+        "evidence_quote": "Demorou demais para entregar.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00040",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "A entrega atrasou muito, chegou depois do prazo.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00041",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Produto veio quebrado, defeito de fabrica.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00042",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "medium",
+        "evidence_quote": "Recebi o produto errado, nao era o que pedi.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00043",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "medium",
+        "evidence_quote": "Faltou um item na caixa, incompleto.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "packaging",
+        "severity": "medium",
+        "evidence_quote": "Faltou um item na caixa, incompleto.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00045",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "medium",
+        "evidence_quote": "péssimo atendimento do vendedor, sem resposta.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "péssimo atendimento do vendedor, sem resposta.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00046",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "Embalagem danificada mas o produto ok.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "packaging",
+        "severity": "low",
+        "evidence_quote": "Embalagem danificada mas o produto ok.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.2,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00047",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "medium",
+        "evidence_quote": "Demorou demais para entregar.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00050",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "A entrega atrasou muito, chegou depois do prazo.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00051",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Produto veio quebrado, defeito de fabrica.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00052",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "medium",
+        "evidence_quote": "Recebi o produto errado, nao era o que pedi.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00053",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "medium",
+        "evidence_quote": "Faltou um item na caixa, incompleto.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "packaging",
+        "severity": "medium",
+        "evidence_quote": "Faltou um item na caixa, incompleto.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00055",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "medium",
+        "evidence_quote": "péssimo atendimento do vendedor, sem resposta.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "péssimo atendimento do vendedor, sem resposta.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00056",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "Embalagem danificada mas o produto ok.",
+        "evidence_quote_en": ""
+      },
+      {
+        "category": "packaging",
+        "severity": "low",
+        "evidence_quote": "Embalagem danificada mas o produto ok.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.2,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "review_00057",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "medium",
+        "evidence_quote": "Demorou demais para entregar.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  }
+]
