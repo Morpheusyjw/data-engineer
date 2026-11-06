@@ -50,3 +50,10 @@ python run_all.py --only q1 q3
 - Q5 给出 **10 万/天 vs 100 万/天不同架构**的 LLM 成本量化与 3 大风险预案。
 
 > 诚实声明：代码全程借助 AI 辅助完成，但在 `REFLECTION.md` 中已逐题标注「我自己的思路」与「尚未完全吃透之处」。
+
+## 五、如何提交（Fork → 推送）
+
+本项目已在本地完成 **9 个独立 commit（每个模块一个，信息明确）**。请把仓库 **Fork 到你的公开 GitHub 仓库**后推送，
+并附上最终 commit hash。完整分步命令（含 rebase 冲突处理、发邮件模板）见 ➜ **[`SUBMIT.md`](SUBMIT.md)**。
+
+> ⚠️ 严禁把数据集 CSV / `.env` 提交（`.gitignore` 已忽略）。提交后**不要再改代码**，hash 会变。
