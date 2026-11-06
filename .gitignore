@@ -1,0 +1,30 @@
+# ============================================================
+# .gitignore（复刻原题规则 + 安全补充）
+# 严禁把数据集 CSV / 中间产物 parquet 提交进仓库（题目硬性要求）。
+# 新增 .env / .venv / __pycache__ 为安全与隔离补充，未改动 CSV 相关规则。
+# ============================================================
+
+# ---- 数据集（严禁提交）----
+data/*.csv
+data/*.xlsx
+data/*.parquet
+data/olist/
+data/Online Retail II*/
+data/Brazilian E-Commerce*/
+!data/.gitkeep
+
+# ---- Q3 中间产物（运行时生成，不提交）----
+q3_etl_pipeline/outputs/*.parquet
+q3_etl_pipeline/pipeline_log.txt
+
+# ---- 密钥与本地环境（安全）----
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# ---- 其他产物（按需）----
+*.log
+.ipynb_checkpoints/

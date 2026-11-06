@@ -1,0 +1,27 @@
+# ============================================================
+# 数据工程师笔试题 — 依赖清单
+# 说明：本清单锁定所有第三方依赖，确保 `python run_all.py` 可复现。
+# 安装方式（建议在虚拟环境中）：
+#   python -m venv .venv && source .venv/bin/activate   (Windows: .venv\Scripts\activate)
+#   pip install -r requirements.txt
+# 版本号采用 ">= 下限" 形式，兼顾可复现性与兼容性；如需完全冻结可加 pip freeze。
+# ============================================================
+
+# ---- 数据处理核心 ----
+pandas>=2.0.0          # DataFrame 处理、报表生成
+numpy>=1.24.0          # 数值计算
+pyarrow>=12.0.0        # 读写 Parquet（Q3 输出格式）
+
+# ---- 数据库（Q2 强制 MySQL 8.0+）----
+sqlalchemy>=2.0.0      # ORM / 连接池，用于把 CSV 灌入 MySQL
+pymysql>=1.1.0         # MySQL 纯 Python 驱动（sqlalchemy 通过它连 MySQL）
+
+# ---- 数据下载（Q1/Q2 数据集）----
+kagglehub>=0.2.0       # Kaggle 官方 Python 包，支持免 CLI 直接下载数据集
+
+# ---- LLM 抽取（Q4，可选；缺失时自动降级为规则方法）----
+openai>=1.30.0         # OpenAI 兼容接口（也适用于 Azure / 本地兼容网关）
+
+# ---- 工程辅助 ----
+python-dotenv>=1.0.0   # 从 .env 读取 API Key 等敏感配置，避免硬编码
+tqdm>=4.66.0           # 进度条（Q3/Q4 大批量处理时可视化）
