@@ -11,13 +11,13 @@
 
 ## 第 0 步：准备 GitHub 账号
 1. 打开 https://github.com ，免费注册并登录。
-2. 配置本地 git 身份（把下面邮箱/名字换成你自己的）：
+2. 配置本地 git 身份（已完成 ✅，当前身份）：
    ```bash
    cd /Users/yangjingwen/WorkBuddy/2026-11-06-22-24-21/data-engineer
-   git config user.name  "你的名字"
-   git config user.email "你的邮箱@xx.com"
+   git config user.name  "杨婧雯"
+   git config user.email "1696098596@qq.com"
    ```
-   > 仓库里现在已经用占位身份 `Candidate` 提交了，交之前改成你自己的即可。
+   > 已用真实身份 `杨婧雯 <1696098596@qq.com>` 配置完成。注意：此前 10 个历史提交的 author 仍是占位的 `Candidate`，如需统一可后续 rebase 改写（非必须，不影响提交）。
 
 ---
 

@@ -110,34 +110,38 @@ brew install --cask visual-studio-code
 
 ---
 
-## 5. Kaggle 账号 + API Token（下载数据集用，必做）
+## 5. Kaggle 账号（仅 Olist 需要，Q1 免账号）
 
-两份数据集都在 Kaggle 上，且**必须登录账号才能下载**（题目也要求写自动下载脚本）。
+> **实测结论（重要，别被吓到）**：
+> - **Q1 的 Online Retail II**：在 Kaggle 上是**公开数据集**，`download_data.py` 通过 `kagglehub` **匿名即可下载**，**不需要任何 Kaggle 账号**——直接跑就能拿到，根本不用注册。
+> - **Q2/Q3 的 Olist**：必须登录 Kaggle 账号才能下载（匿名会 403）。所以你**只需为 Olist 注册一个 Kaggle 账号**，Q1 不用管。
 
-### 5.1 注册 Kaggle
-打开 https://www.kaggle.com 注册/登录。
+### 5.1 注册 Kaggle（只为 Olist）
+1. 打开 https://www.kaggle.com → 右上角 **Register / Sign up**
+2. 推荐用 **Google 账号一键注册**，约 1 分钟搞定。
+3. 去邮箱点验证链接。
 
-### 5.2 生成 API Token
+### 5.2 下载 Olist 的两种方式（任选其一）
+**方式 A（推荐，零配置）**：登录后打开
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+点页面上的 **Download** 下载 zip，解压后把 9 个 `olist_*.csv` 放进项目的 `data/olist/` 目录即可。
+> 这种方式**不需要配 API Token、也不必验证手机号**，最简单。
+
+**方式 B（自动化）**：在 5.3 生成 `kaggle.json` 后，`download_data.py` 会自动下载 Olist。
+> ⚠️ 方式 B 首次用 API 时 Kaggle 可能要求**手机号验证**，否则会 403。嫌麻烦就用方式 A。
+
+### 5.3 生成 API Token（仅方式 B 需要）
 1. 右上角头像 → **Settings** → 左侧 **API** → 点击 **Create New Token**。
-2. 浏览器会下载一个 `kaggle.json` 文件（里面是你的账号名和密钥）。
-
-### 5.3 把 Token 放到正确位置
-把下载的 `kaggle.json` 移动到 `~/.kaggle/` 目录并改权限（macOS/Linux 要求 600，否则 Kaggle 拒绝）：
-
+2. 浏览器下载 `kaggle.json`，移动到正确位置并改权限（macOS/Linux 要求 600）：
 ```bash
 mkdir -p ~/.kaggle
 mv ~/Downloads/kaggle.json ~/.kaggle/kaggle.json
 chmod 600 ~/.kaggle/kaggle.json
 ```
+验证：`ls -l ~/.kaggle/kaggle.json` 应显示 `-rw-------`。
 
-**验证**：
-```bash
-python -c "import kagglehub; print('kagglehub ok')"   # 装完依赖后验证
-ls -l ~/.kaggle/kaggle.json                            # 应显示 -rw------- 
-```
-
-> 配置好这个，运行 `python run_all.py` 时 `download_data.py` 会自动把两份数据集下到 `data/` 目录。
-> 如果暂时不想配置，也可以手动去这两个 Kaggle 页面下载 CSV，按题目目录结构放到 `data/`。
+> 小贴士：Q1 的 Online Retail II 不用任何账号，`python download_data.py` 会自动匿名下好；
+> 只有 Olist 才会因缺凭证报错——那时你再决定用方式 A 还是 B 补上即可。
 
 ---
 
@@ -204,9 +208,11 @@ OPENAI_MODEL=gpt-4o-mini
 
 在 `(.venv)` 激活状态下，进入项目根目录执行：
 ```bash
-pip install -r requirements.txt
+# 国内网络更快，建议加清华镜像；官方源慢时可去掉 -i 部分
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
 ```
 这会把 pandas、numpy、pyarrow、sqlalchemy、pymysql、kagglehub、openai 等一次性装好。
+（本项目已用该镜像装好，正常情况下你无需重装；换机器时照此执行即可。）
 
 **验证**：
 ```bash

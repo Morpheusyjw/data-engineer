@@ -40,12 +40,18 @@
 - `order_items` 与 `order_reviews` 同时 JOIN 会产生**行膨胀**（商品数 × 评价数），导致 `SUM(price)` 虚高——
   这正是 Q2.4 要指出的统计错误。→ 在 Q2.3 就提前用"先按 order_id 聚合"规避。
 - 灌库时 `product_category_name` 等文本列若用默认类型可能过短，需确认 MySQL TEXT 长度够用。
+- **本机装的是 MySQL 8.0.46 官方 DMG，默认 `caching_sha2_password`**。pymysql 走非加密 TCP 连时会因需要服务器
+  公钥而**握手挂起**（进程被沙箱强杀、退出码 137，不是连不上）。→ 用 mysql CLI 把 `root@localhost` 切到
+  `mysql_native_password`（密码不变），pymysql 无需公钥即可直连。这是 MySQL 8 + Python 的经典坑，也是面试考点。
+- `run_q2.py` 初版先 `connect()` 连 `olist` 库、再在连接里 `CREATE DATABASE`，但 MySQL 在**连接阶段**库不存在会
+  直接报 1049，建库语句没机会执行。→ 给 `connect()` 加哨兵值 `_NO_DB`，先连「服务器实例」（URL 不带库名）建库，
+  再连具体库。已实跑验证：建库成功。
 
 **性能**：Q2.4 给了联合索引 `(order_status, order_purchase_timestamp)` + 预聚合改写，
 数据量 ×100 也能秒级（原 SQL 5 分钟）。
 
-**未完成**：Q2 的 SQL 我在本地**未能实跑**（沙箱无 MySQL），逻辑是基于 Olist 已知 schema 写的，
-需你在本地 Docker MySQL 跑一次产出 `q2_results.md` 验证。
+**未完成**：Q2 的 SQL 本身还需在**真实 Olist 数据**上实跑产出 `q2_results.md`（当前仅验证了数据库连接与建库链路通畅）。
+你本地装好 MySQL 8.0、下载 Olist 数据集后，`python run_all.py --only q2` 即可补出结果。
 
 **不合理/歧义**：Q2.2 的 `cancel_rate` 口径（取消/总下单 还是 取消/已送达）题目没明说，我取"取消/总下单"并写明。
 

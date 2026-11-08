@@ -17,7 +17,7 @@ sqlalchemy>=2.0.0      # ORM / 连接池，用于把 CSV 灌入 MySQL
 pymysql>=1.1.0         # MySQL 纯 Python 驱动（sqlalchemy 通过它连 MySQL）
 
 # ---- 数据下载（Q1/Q2 数据集）----
-kagglehub>=0.2.0       # Kaggle 官方 Python 包，支持免 CLI 直接下载数据集
+kagglehub>=0.2.0       # Kaggle 官方 Python 包，支持免 CLI 直接下载数据集（Q1 公开集可匿名下载）
 
 # ---- LLM 抽取（Q4，可选；缺失时自动降级为规则方法）----
 openai>=1.30.0         # OpenAI 兼容接口（也适用于 Azure / 本地兼容网关）

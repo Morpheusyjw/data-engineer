@@ -51,32 +51,44 @@ def _to_datetime_cols(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def connect(db: str | None = None) -> "create_engine":
-    """根据 .env 创建 SQLAlchemy 引擎。"""
+# 哨兵值：区分「未传 db（用 MYSQL_DATABASE）」与「显式传 None（连服务器实例，不指定库）」
+_NO_DB = object()
+
+
+def connect(db=_NO_DB) -> "create_engine":
+    """根据 .env 创建 SQLAlchemy 引擎。
+
+    - 不传 db：使用 MYSQL_DATABASE 指定的库（默认 olist）。
+    - 显式传 db=None：连接「服务器实例」本身（URL 不指定库），
+      用于建库前的 CREATE DATABASE。注意 MySQL 连接若指定了
+      不存在的库，会在连接阶段直接报 1049，因此必须先连服务器实例建库。
+    """
     load_dotenv()
     host = os.getenv("MYSQL_HOST", "127.0.0.1")
     port = int(os.getenv("MYSQL_PORT", "3306"))
     user = os.getenv("MYSQL_USER", "root")
     pwd = os.getenv("MYSQL_PASSWORD", "root")
-    database = db or os.getenv("MYSQL_DATABASE", "olist")
-    url = f"mysql+pymysql://{user}:{pwd}@{host}:{port}/{database}?charset=utf8mb4"
+    if db is _NO_DB:
+        database = os.getenv("MYSQL_DATABASE", "olist")
+    else:
+        database = db  # None 表示连服务器实例，不指定库
+    if database:
+        url = f"mysql+pymysql://{user}:{pwd}@{host}:{port}/{database}?charset=utf8mb4"
+    else:
+        url = f"mysql+pymysql://{user}:{pwd}@{host}:{port}?charset=utf8mb4"
     return create_engine(url, pool_pre_ping=True)
 
 
 def ingest() -> None:
     """把 9 张 CSV 灌入 MySQL。"""
     log.info("开始灌库 ...")
-    engine = connect()
-    # 确保数据库存在
-    with engine.connect() as c:
-        c.execute(text(f"CREATE DATABASE IF NOT EXISTS {os.getenv('MYSQL_DATABASE', 'olist')}"))
-    eng_db = connect()  # 重连到具体库
-    eng_db = create_engine(  # noqa
-        f"mysql+pymysql://{os.getenv('MYSQL_USER','root')}:{os.getenv('MYSQL_PASSWORD','root')}"
-        f"@{os.getenv('MYSQL_HOST','127.0.0.1')}:{int(os.getenv('MYSQL_PORT','3306'))}"
-        f"/{os.getenv('MYSQL_DATABASE','olist')}?charset=utf8mb4",
-        pool_pre_ping=True,
-    )
+    db_name = os.getenv("MYSQL_DATABASE", "olist")
+    # 先连「服务器实例」（不带库名）建库，再连到具体库；
+    # 否则连接阶段就会因库不存在而报 1049，建库语句无从执行。
+    eng_server = connect(db=None)
+    with eng_server.connect() as c:
+        c.execute(text(f"CREATE DATABASE IF NOT EXISTS {db_name}"))
+    eng_db = connect(db=db_name)
 
     for fname, table in FILE_TO_TABLE.items():
         fpath = OLIST_DIR / fname

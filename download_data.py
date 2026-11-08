@@ -133,15 +133,28 @@ def _print_manual_guide() -> None:
 
 
 def download_online_retail() -> bool:
-    """下载 Online Retail II。成功返回 True，失败（需手动）返回 False。"""
+    """下载 Online Retail II。成功返回 True，失败（需手动）返回 False。
+
+    说明：该数据集在 Kaggle 上为**公开数据集**，kagglehub 支持匿名下载，
+    因此 **无需 Kaggle 账号** 即可获取（已实测：无需 ~/.kaggle/kaggle.json）。
+
+    幂等说明：目标文件已存在通常跳过；若同级有 `.demo` 标记
+    （gen_demo_data.py 生成的演示数据），则判定为占位脏数据，主动删除后重下，
+    避免演示数据冒充真实数据导致分析失真。
+    """
     if ONLINE_RETAIL_TARGET.exists():
-        log.info("Online Retail II 已存在，跳过下载。")
-        return True
+        if (DATA_DIR / ".demo").exists():
+            log.info("检测到演示数据（.demo 标记），将删除并重新下载真实数据集。")
+            ONLINE_RETAIL_TARGET.unlink(missing_ok=True)
+            (DATA_DIR / ".demo").unlink(missing_ok=True)
+        else:
+            log.info("Online Retail II 已存在，跳过下载。")
+            return True
     try:
         import kagglehub
 
-        log.info("尝试用 kagglehub 下载 Online Retail II ...")
-        # 返回的是下载目录的本地路径
+        log.info("尝试用 kagglehub 下载 Online Retail II（公开数据集，无需 Kaggle 账号）...")
+        # 返回的是下载目录的本地路径；匿名下载公开数据集，无需凭证
         path = kagglehub.dataset_download(ONLINE_RETAIL_KAGGLE)
         return _try_copy_online_retail_from(Path(path))
     except Exception as exc:  # noqa: BLE001 - 任何下载异常都转为可读提示
