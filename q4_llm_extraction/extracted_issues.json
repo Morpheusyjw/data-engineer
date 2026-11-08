@@ -2786,2148 +2786,6 @@
     "confidence": 0.5
   },
   {
-    "review_id": "9314d6f9799f5bfba510cc7bcd468c01",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "GOSTARIA DE SABER O QUE HOUVE, SEMPRE RECEBI E ESSA COMPRA AGORA ME DECPCIONOU",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "2c5e27fc178bde7ac173c9c62c31b070",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Não gostei ! Comprei gato por lebre",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "58044bca115705a48fe0e00a21390c54",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "Sempre compro pela Internet e a entrega ocorre antes do prazo combinado, que acredito ser o prazo máximo. No stark o prazo máximo já se esgotou e ainda não recebi o produto.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "9fd59cd04b42f600df9f25e54082a8d1",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Nada de chegar o meu pedido.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "e233e51d11511bf30e568c76360ace52",
-    "issues": [
-      {
-        "category": "missing_item",
-        "severity": "high",
-        "evidence_quote": "recebi somente 1 controle Midea Split ESTILO.\r\nFaltou Controle Remoto para Ar Condicionado Consul",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "6d06808638ec0701bccd70bc8d462c28",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "O produto não chegou no prazo estipulado e causou transtorno, pq programei a viagem de férias do meu filho, baseado no prazo. Moro na Bahia e ele em Cuiabá sozinho. Agora, a casa está vazia. ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "8b230a1373c6dc4bd867099fda1d7039",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Eu comprei duas unidades e só recebi uma e agora o que faço?",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "cb2fc3e5711b5ae85e0491ee18af63ed",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Produto bom, porém o que veio para mim não condiz com a foto do anúncio.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "60c714ed14cef913944a3147094a4742",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Produto muito inferior, mal acabado.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "0bd4dcc4f6c4621baf37f73495cad8c4",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "low",
-        "evidence_quote": "Entrega no prazo",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "65dfeb60c40e3cbb0a1838285d86f885",
-    "issues": [
-      {
-        "category": "seller_communication",
-        "severity": "high",
-        "evidence_quote": "Pedi reembolso e sem resposta até momento ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "ff722b4c68783a4459a3adb9bb4e1d0d",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Produto chegou, mas meu PC não conseguiu reconhecer as portas USB.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "ae728c1061bf163b4bd256ad9ee0bb83",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Este foi o pedido\r\nBalde Com 128 Peças - Blocos De Montar 2 un - R$ 25,00 cada (NÃO FOI ENTREGUE)\r\nVendido e entregue targaryen\r\nTapete de Eva Nº Letras 36 Peças Crianças 1 un - R$ 35,90 (ESTE FOI ENTREG",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "72730619a00e0ecdecf0a4ff862d8996",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "comprei tres pacotes de cinco folhas cada de papel transfer para tecido escuro e so recebi dois",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "5c37d7ba6ef2f031c34bb4fda3454018",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "medium",
-        "evidence_quote": "Demorou de mais pra entrega ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "46d8249ea59101c7288936c3e6f155d7",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "low",
-        "evidence_quote": "A entrega foi dividida em duas. Não houve comunicado do loja. Cheguei a pensar que só haviam enviado parte do produto. ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "346317f9aff540395fe46893611854f8",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Não funciona não faz sincronismo",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "c422274e50e900b46fee429016c5458d",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Gostei ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "487f8ff16eaf366dc7c01652202048c3",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Chegou apenas uma peça, mas na nota e na garantia constam as duas joias.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "ef8ae544c432bb1053ba5990bd0d6227",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "EU NÃO RECEBI O PRODUTO E CONSTA NO SISTEMA QUE EU RECEBI ALÉM DE PAGAR CARO DO FRETE ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "aaab917291fea34988b9a0cb60e0716f",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Comprei o relógio, unissex e enviaram um relógio feminino, bem menor que as especificações do anúncio.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "5f938e5f5f2e9a75710b54feeb9ea610",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "A peça não serviu",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "d7ea05bb4f9c77d606fd90b1a27e317d",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "Comprei o produto dia 25 de fevereiro e hoje dia 29 de marco não fora entregue na minha residência. Não sei se os correios desse Brasil e péssimo ou foi a própria loja que demorou postar.",
-        "evidence_quote_en": ""
-      },
-      {
-        "category": "quality_defect",
-        "severity": "high",
-        "evidence_quote": "Comprei o produto dia 25 de fevereiro e hoje dia 29 de marco não fora entregue na minha residência. Não sei se os correios desse Brasil e péssimo ou foi a própria loja que demorou postar.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "185cb85ede91009d7a8e685687c037ee",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "fiz minha compra faz 30 dias e não recebi ainda meu produto.\r\nPrecisa melhorar nas entregas",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "57e994485c2ebd293e4fa9cd62e5bb96",
-    "issues": [
-      {
-        "category": "seller_communication",
-        "severity": "low",
-        "evidence_quote": "Comprei dois lustres pendentes, com a parceira targaryen e só me enviaram um lustre. Abri reclamação, mas ainda não recebi resposta. Aguardo solução por parte de Lojas lannister.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "c40a6b6e0181e5ec0d12cbc2e12c49d3",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "high",
-        "evidence_quote": "Faltou 1 produto e os que recebi 1 veio quebrado",
-        "evidence_quote_en": ""
-      },
-      {
-        "category": "missing_item",
-        "severity": "high",
-        "evidence_quote": "Faltou 1 produto e os que recebi 1 veio quebrado",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "06f47dacd0575e592bf6a17e922ce6cd",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "aqui está descrevendo como entregue só que ate agora não recebi",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "4656b8ed41c17f6be05e911e211ecd8f",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Comecei a usar agora ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "6b341682ab39af9fa00d72d7388c903b",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Comprar um produto correto na capa mas interno ser outro.???????\r\n",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "e4f0765c572989acb3d2d17c911ccce4",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "low",
-        "evidence_quote": "entrega super rapida",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "557ae9c16a8ea3909db2fc5a01bc5151",
-    "issues": [
-      {
-        "category": "seller_communication",
-        "severity": "low",
-        "evidence_quote": "Fiz um pedido de 4 garrafas de azeite.Chegaram 2 num dia e as outras 2 quase 48 horas depois.Contato com a loja muito dificil,tanto via e-mail qto por telef.O suspense terminou mas lá não compro mais",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "cde97e23deec3aa11e838402378706ee",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Não posso! Estou aguardando a chegada do produto que comprei!Logo que isso aconteça, terei minha opinião formada!",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "3ff8285931cc9b54c9ad22ba78957f63",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Comprei dois produtos e recebi somente um. Mandei dois emails para a loja e não tive nenhum retorno. Estou insatisfeita.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "fdb0e5a14fb6456e28ce7b3b054b8843",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Não recomendaria esta loja nem pretendo voltar a comprar nela.A mercadoria foi entregue após o prazo e quase 1 mês após a compra. No site das lannister costumam chegar antes do prazo. Estranhei muito",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "a36150969fe6bd09ed011dd78aeb0189",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "Demora na entrega, detestei o atendimento e NUNCA mais compro. baratheon quando vendia por eles mesmos era bem melhor! ",
-        "evidence_quote_en": ""
-      },
-      {
-        "category": "seller_communication",
-        "severity": "high",
-        "evidence_quote": "Demora na entrega, detestei o atendimento e NUNCA mais compro. baratheon quando vendia por eles mesmos era bem melhor! ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "43992f6d75ecc01ddd8c748b9362bc81",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "o meu produto não chegou... segundo o rastreio está parado em Ribeirão Preto sp... ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "8b4c14417bccab81710772ecb8b23fd6",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "high",
-        "evidence_quote": "produto deu defeito na 1 vez de uso.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "252b934455d29ca8cc070504686ecc52",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "até agora não recebi o produto.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "b736ff4204044e49e39062584d06fa74",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": " A loja anuncia um produto e entrega outro.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "65b934c20d632fc2df0fd4723464fa78",
-    "issues": [
-      {
-        "category": "packaging",
-        "severity": "low",
-        "evidence_quote": "Apesar de ter sido entregue rapidamente, substituíram a caixa METEORO pela caixa BORNE. Quando tentei reclamar nas lannister o sistema estaav fora do ar. A guitarra e acessórios estavam corretos.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "c239d18d7e310e477d5e7b76b362db1d",
-    "issues": [
-      {
-        "category": "missing_item",
-        "severity": "high",
-        "evidence_quote": "produto foi entregue com umas das alças com problemas (está faltando 1 pino de fixação)",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "b3df5ccdfff218d039dd166e3da759f5",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "medium",
-        "evidence_quote": "Foi marcado o dia 14/02 para entrega do pedido e no rastreamento marcava que o produto já havia sido entregue na data mas na realidade não foi entregue. O produto só foi entregue no dia 28/02.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "c11da18223114c483b887b9914045f79",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "LOJA ALÉM DO FRETE SER MUITO CARO . O PRODUTO LEVA QUASE 30 DIAS ÚTEIS , PARA CHEGAR NA SUA CASA",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "6f885e2fd69412264d9e74e805175d53",
-    "issues": [
-      {
-        "category": "wrong_product",
-        "severity": "high",
-        "evidence_quote": "Recebi bem rápido, porém veio outro produto, e não o que eu pedi, o modelo veio diferente, a cor, veio uma capinha que não tem zíper, enfim, não recomendo. ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "f7eb8792e67d53e01a224bfa9b6802b2",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "Cancelaram a minha compra um dia antes da entrega, liguei para a lannister e os atendentes não sabiam o que estava acontecendo, uma bagunça, agora estou esperando para ver se vai ser cobrado",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "4dd68a0dee5ede8a445f797c46bca436",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "o acabento que estava na foto era bonito a que chegou foi de um sintetico feio com um acabento todo borrado orrivel nao gostei",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "f55ac350831de6694d569e9c0176dacd",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "E muito desordenado comprei três produtos mais não veio no dia sertões veio separado e em data separada ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "96ee030286f50f61c6d199bdfaa5573d",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "high",
-        "evidence_quote": ", muito ruim ! ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "6280ca6a9e8c3a56b668ec8c5396caaf",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Passou dos dias previstos.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "968989a3b5192c9b9436fe7546acaca4",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Ao fazer a compra do kit entendi que receberia 2 frascos de 60 cápsulas (cada) e não 2 frascos com 60 cápsulas no total. Só não vou devolver porque estou precisando do produto.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "3db041dd46e9935752c691a2093799c2",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Produto não recomendo não ler em nenhum dispositivo",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "f3f77d01a24ce4da52b6f7e83e71498d",
-    "issues": [
-      {
-        "category": "seller_communication",
-        "severity": "high",
-        "evidence_quote": "Tentando cancelar o produto desde antes da emissão da nota fiscal. Não fui avisada que estava no correio, não tive nenhuma resposta do cancelamento e nao consigo devolver. ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "b396ba75350276a6cc1993b6627dceea",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "high",
-        "evidence_quote": "Boa Noite\r\n\r\né lamentável, esta loja que tantas compras eu ja fiz e hoje não me da satisfação sequer de um relógio na importância de 50,00 reais ... um produto com defeito e até agora não me deu retor",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "f3401a1de0c152923ba58cf7b7d2b84a",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "medium",
-        "evidence_quote": "A capa protetora não é exatamente o que eu esperava deixa a desejar no tipo material e na qualidade.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "ef9ef383ff6625e8e118db388ad3420d",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "low",
-        "evidence_quote": "No site o produto parece ter melhor qualidade de material e acabamento.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "f4d74b17cd63ee35efa82cd2567de911",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "low",
-        "evidence_quote": "A embalagem deixou a desejar, por pouco o produto não foi danificado, a caixa estava toda amassada.",
-        "evidence_quote_en": ""
-      },
-      {
-        "category": "packaging",
-        "severity": "low",
-        "evidence_quote": "A embalagem deixou a desejar, por pouco o produto não foi danificado, a caixa estava toda amassada.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "f677a419ee4910ae12bf8cb73dc0d332",
-    "issues": [
-      {
-        "category": "missing_item",
-        "severity": "low",
-        "evidence_quote": "Faltaram os cabos e o manual",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "7cae6dc895e8f5238f2300e103742ce2",
-    "issues": [
-      {
-        "category": "packaging",
-        "severity": "medium",
-        "evidence_quote": "O produto foi embalado apenas com papel pardo sobre a embalagem e enviado pelos correios. Lógico, a embalagem chegou amassada e só deus sabe se o produto está funcionando ou não, ainda não testei.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "af41ee42a3e2dc767023449fda6c12fa",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "Última vez que compro pois hoje vai fazer 1 mês que fiz a comprar e nada, e se demorar mas tempo de entregar estarei procurando meus direitos contra as lojas lannister e a targaryen.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "4f2d420b33665f546c373953c8dfb5fd",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "high",
-        "evidence_quote": "Não gostei do produto, material de péssima qualidade.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "bfd1c687738141ef5861a1a1269ca855",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Dos dois produtos comprados, foi entregue apenas um!",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "6724babb3b9952660bc345b5f5a4db07",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "Nao compro mais na lannister. Se é parceiro da lannister ou não essa targaryen jamais uso novamente. Quando eu ler que é dessa empresa saio correndo. Um absurdo. Quase um mês para entregar. Extra.com ok",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "c5efc0219f2949a8f81d5e8b39b9ca0c",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Recebi corretamente o produto",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "5c1ba09de5c746017d406bd2cfefeca3",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "recebe apenas 01 peça do produto! estou precisando da 2 peças restante! ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "b54c1776f5955ced2f54c711c665a025",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Nem fizeram a nota fiscal ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "f4d2c6ed9bebda9d41573e30f3d629b5",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "O MP3 player não funciona, mesmo trocando a pilha diversas vezes. Tive que devolver.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "341ccd0a62b82793121e9ebdd1eafaf9",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "A targaryen não é de confiança não entregou a minha compra e colocou no rastreamento do pedido que foi entregue no dia 14/12/17 empresa falsa quero receber meus produtos que foram pagos com boleto bancari",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "0272d07f5d34a8c3d31272e7ff967e7b",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "A bolsa e muito bonita por fora\r\nMas dentro não tem forro \r\nE é bem fragil \r\n",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "320ae91d4c5cb8164c168fc68392a5fb",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Quando instalei o cartucho de tinta, a minha impressora indicou que o mesmo estava vazio, e apresentou a mensagem de erro \"!\" em cima do marcador de nível da tinta. Já solicitei a troca. ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "b92b5b1122f1298b87bc7882115db417",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "Não foram entregue as duas capas de couro compradas. Apenas uma delas. Aguardo a devolução do dinheiro ou a entrega da segunda capa.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "f922b9d00a755863556181c1a366193d",
-    "issues": [
-      {
-        "category": "missing_item",
-        "severity": "low",
-        "evidence_quote": "Fiquei feliz com. O tecido ,mas acho que faltou o lençol de cima para ficar completo , espero que logo lancem.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "7c43af1205ff01c2b95065b2b02b3343",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "low",
-        "evidence_quote": "Houve alguma confusão entre vendedor e o stark, pois recebi um email do stark pedindo o cancelamento do produto por algum imprevisto na entrega; neguei e recebi o produto dias depois.",
-        "evidence_quote_en": ""
-      },
-      {
-        "category": "seller_communication",
-        "severity": "low",
-        "evidence_quote": "Houve alguma confusão entre vendedor e o stark, pois recebi um email do stark pedindo o cancelamento do produto por algum imprevisto na entrega; neguei e recebi o produto dias depois.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "f8499130452fd0f108a9a24454f51c32",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "No dia 19 de maio usei e a à alça quebrou sem muito peso ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "8eaebf463e205cdcc126801ca343a33f",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "comprei o produto na cor preta e chegou na cor vermelha.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "5fd2d6fbe0e63511703a80078e938be5",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Pensei que a mochila fosse um material mais resistente.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "ed2842d0aa7ac6285c7547d17f17da4d",
-    "issues": [
-      {
-        "category": "seller_communication",
-        "severity": "high",
-        "evidence_quote": "Comprei um produto e veio outro.\r\nMandei msg informando o erro , porém não obtive resposta.\r\nObrigado ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "9a8d24623d56c13f950247baa73f4c80",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "o produto demora muita para chegar !",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "4b4f1f1ad3fcac5ed98109ed67b1d072",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "So recebemos um relogio pelo correio\r\n\r\natt\r\n",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "9d14b1424ca737608bc50f9d3c1a78bb",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "low",
-        "evidence_quote": "Produto de boa qualidade, exatamente conforme anunciado, e o preço baixo é uma atrativo a mais.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "9ba260ed7e6a228e5e9910e035a70c7f",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Somente foi entregue uma unidade, ao invés de duas.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "699b866b71b5ad31f1faa2b1ab4fe1a6",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "medium",
-        "evidence_quote": "recebi sim mais com defeito os encaixes sao dois igual e nao fecham \r\n",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "73a58bd10f2667a04ee95df0071d5988",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Ainda não recebi",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "41b377e06cb52feb5630c3ce360cd8cd",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Até agora nao recebi.Comprei este aparelho por questao de saude,portanto nao recomendo esta loja.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "1ff86f2ca823caab2e02507d2633081d",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "Gostaria de saber quando chegará meu produto?\r\nPois já se passou a data prevista para entrega , gostaria de uma resposta estou aguardando!",
-        "evidence_quote_en": ""
-      },
-      {
-        "category": "seller_communication",
-        "severity": "high",
-        "evidence_quote": "Gostaria de saber quando chegará meu produto?\r\nPois já se passou a data prevista para entrega , gostaria de uma resposta estou aguardando!",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "d49137ea593f67aa74446503e88aa91d",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "O produto entregue difere do pedido\r\ntrata-se de um produto inferior!\r\nGostaria que fosse solucionado o problema!\r\nNão estou satisfeito com procedimento!",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "d3b4d016ccfc708c50866b550f903b9d",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Comprei o produto, paguei no boleto e só recebi metade do produto, anunciaram uma coisa é mandaram outra. Muito insatisfeita 😡😡😡",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "19074f5809403265fc47263ea93325ee",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Comprei o produto dia em inicio de março e não recebi no prazo abrindo até um protocolo para resolverem minha situação",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "c54629f4fc4dcf65a10efb35322ec769",
-    "issues": [
-      {
-        "category": "seller_communication",
-        "severity": "high",
-        "evidence_quote": "Não recebi o produto, assim como nenhum contato por parte do .vendedor",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "1c6d1543dc13cb2465c63ac5de6cb4d0",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Nem ratrear estou conseguindo:(",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "1f836d160f50247a394034abd93b7c24",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Esperando o instalador",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "a835f8e62dd58cf9c07678bdd7cfb935",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "medium",
-        "evidence_quote": "comprei um produto para ser entregue por essa loja\r\ne ainda não recebi\r\npois assim já se passou a data de entrega",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "782be3066f784bbc0a5f4f5256172488",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "veio conforme o pedido mais o pós venda não respondeu nenhuma das minhas perguntas",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "1489ef235189b9e5e1a9d4308bf228bd",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Comprei duas mochilas, recebi apenas uma, o natal está chegando e até agora nada!",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "b0ac2d014efe743e181a5e8dc9cfb8ad",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "low",
-        "evidence_quote": "O preço foi ótimo, o prazo de entrega que é longo (mais de 1 mês para entregar). Comprei 2 cartuchos e entregaram apenas 1, reclamei e enviaram o outro ainda dentro do prazo de entrega.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "bbb937e9c2b62a2205af03e8a7fed42b",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "medium",
-        "evidence_quote": "comprei um relogio de presente de natal para meu filho e ate agora nao chegou. enviei mensagens e na ultima conversa o relogio chegaria ontem, porem nao recebi nada.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "608e890852fc78c3854d83a0cfab8557",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Até agora não recebi nada, a colcha estava prevista para anteontem(18/12) e até agora nada",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "cb0de6745dc7d44ff821eabbc2613df9",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Os pincéis vieram amassados, não condiz com algumas fotos, mas condiz com a descrição. São fracos, não cabem na case e um veio descolado ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "71f7323f884804c6d38bbcd658e07318",
-    "issues": [
-      {
-        "category": "wrong_product",
-        "severity": "high",
-        "evidence_quote": "O produto veio diferente da q mostra na foto, não é de luxo, nem acolchoado como dizia.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "32cba2bc8e4b8a57f2063c108e2d6693",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Comprei 02 só enviaram 01",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "86b8f28757b213a5f9888c8f31f15dc5",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "parece que mantem bem o alimento sem murchar (batata palha) mas a tampa é estranha, parece que não fecha. e o inox da tampa é feio.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "5bed105c6756af72c550e78d4e9bcba7",
-    "issues": [
-      {
-        "category": "seller_communication",
-        "severity": "high",
-        "evidence_quote": "Estou aguardando uma resposta até hoje, sobre os meus produtos, já foram pagos e ainda NÃO os recebi, foram 03 iguais e necessito falar com pessoas e NÃO máquina ou gravações.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "cb0afd21795569cda373d39c5a0ca502",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "ainda não recebi o produto",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "d34ad0ccdfa8649968e8eb3cac55e8b4",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Gostaria de receber os produtos corretos, tentei realizar a troca pela devolução de dinheiro no cartão, mas o site da lannister não possibilita que seja realizado.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "2d0d80576ee9bbab49cc108d9ec7a0fb",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "high",
-        "evidence_quote": "meu produto veio com defeito,devolvi conforme informado.postado no correio conforme indicado.e até hoje não recebi nenhuma notificação da empresa quanto a devolução e análise para ter meuressarcimento",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "45d1572f5bfca2707ae6748265f8169a",
-    "issues": [
-      {
-        "category": "seller_communication",
-        "severity": "high",
-        "evidence_quote": "Só recebemos 1 cartucho já abrimos reclamação no site e ainda não obtive resposta. ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "8f16e30ff188fe57a427fee7afb60c90",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "O tampo da mesa chegou todo amassado e batido.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "a099d25e117c98a5d7ae5b70119b7f32",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Dentro do prazo porém poderiam agilizar como no meu outro produto que foi entregue em 2 dias.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "f43eeb6bb515e7c94635efb799ac5901",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Até o momento eu n recebir o produto",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "7b66de927426b71a817aa36df5e8a0b3",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Muito bom o produto e preço cobrado!",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "d2b2e7612330948a735af300611bb922",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "low",
-        "evidence_quote": "O aparelho chegou apresentando defeito, não está apresentando todas as funções no visor digital.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "bde05133984518116b3d77d994e375d3",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "O produto não está nas medidas corretas indicadas na oferta. Terei q ligar para vcs para troca",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "253662a4cd78b84ca6547d0359fe90f6",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "No aguardo de um retorno urgente.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "24203dee295cf23bd24b7ace9bca261f",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "Produto mais que passou do prazo de entregar, tento resolver o problema com a empresa e não consigo falar com ninguém. Tudo que fazem é me passar para reclamar num sistema que não funciona.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "38bcaf95057f842c3b64408733eaab1b",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Só recebi um produto. Consta que já recebi os dois. Não recebi a sapateira. ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "4f3d4af8f472d4ccd334d4222c4e9ef4",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "Deram um prazo muito grande para a entrega do produto e não conseguiram entregar no prazo ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "8bc4d875dbab927e9190060688edc80f",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Excelente produto indico a qualquer pessoa.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "2165b2b26e67eee7a9d28e13c0ad0468",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Não recebi o produto.e agora?",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "fed701d8d331019dcc29237db66c8523",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Chegou amassado... ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "1edf2a3596b417ee8485f64c7c2109ac",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "comprei tapete de borracha para tr4 mitsubishi a loja entregou um tapete de pvc horrivel\r\nno titulo ta tapete borracha tr4,\r\nme enganaram e agora o que fazer sendo que tem despesa para devoluçao, por",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "f99ff17e430a53efe61d359faa3b425e",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "low",
-        "evidence_quote": "SOLICITEI DEVOLUÇÃO. PRODUTO COM DEFEITO",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "cd9125d39cfcb70ed3967732642e4864",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "low",
-        "evidence_quote": "Achei a qualidade do produto muito ruim, não veio nenhuma bucha ou parafuso para fixar na parede.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "8c8ec6ed4210b3d764d3dd3bbe9e87d9",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Boa noite as lojas lannister são ótimas adoro o site hoje faço pouquíssima compra pelo frete abusivo infelizmente não compensa como antes mas precisamos comprar obrigada ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "fb9c35dd3f4294381b42154f21186e83",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "MEU PRODUTO AINDA NÃO FOI ENTREGUE, JÁ FIZ MINHA RECLAMAÇÃO E ATÉ AGORA NÃO TIVE NENHUMA PREVISÃO DE ENTREGA. ESTOU SUPER INSATISFEITO E QUERO MEU DINHEIRO DE VOLTA. FOI DENUNCIAR AO PROCON.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "2464e0bf2ea1b52aa5552b70e5a10dfa",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "A cortina não é o modelo que pedi. |",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "9ee1b9577cf8288c192d2060101e1db4",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "A impressão está saindo com a tinta fraquinha...",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "70d2258489cae12a65d36c8c09fd54c1",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "high",
-        "evidence_quote": "Comprei Rosa com Braços Brancos e entregam toda Preta ?",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "e0dc4bf3a60093ee76994fe44150a25c",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Preciso de uma previsão.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "90018c08b2ca29dddcf499cfa5ec54d8",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "low",
-        "evidence_quote": "Boas Pessoal, a atendente da lannister foi muito atenciosa porém a loja que deveria ter me entregado o produto cancelou a comprar ??? O que será que aconteceu ???",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "3171979b1a7f31c323c2807e85246b47",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "low",
-        "evidence_quote": "Comprei uma cadeira, recebi no prazo, porém a cadeira veio quebrada na parte inferior. Poderiam ter um maior cuidado na embalagem.",
-        "evidence_quote_en": ""
-      },
-      {
-        "category": "packaging",
-        "severity": "low",
-        "evidence_quote": "Comprei uma cadeira, recebi no prazo, porém a cadeira veio quebrada na parte inferior. Poderiam ter um maior cuidado na embalagem.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "560effdc2aaba0ed5d37ed8a98cc6af2",
-    "issues": [
-      {
-        "category": "seller_communication",
-        "severity": "high",
-        "evidence_quote": "Recebi outra boneca, quero devolver e não consigo contato! Jamais compraria novamente dessa loja! ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "397f27a0d2936d02d3447864e0398414",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "ótima compra\r\nmas o frete nao compensa,pesa no orçamento.\r\ndevia ter frete grates\r\n",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "d8d62030afbc777000b61bdfc7312939",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Penso que deveria haver um modo de se comunicar com a empresa caso acontecesse de encomenda não ser entregue ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "3a9cc3b90bc22af3b6edec6ac5e899c8",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Boa noite , não gostei pois nunca conseguimos falar com vcs pelo telefone\r\n",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "1a91202cd7f4d5acd2bc109d5fd3c047",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "O produto não atendeu minhas espectativas, pois os potinhos são dificeis de abrir e fechar e a bandeja onde vai os potinhos veio com pontos de ferrugem",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "bd9ff9329765ed79c1b081269e9f08aa",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Não recebi o jogo na cor tabaco. Só o vermelho. ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "3ba4306480ae86226634b10b023a1250",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Nao foi entregue na minha casa , por isso nao gostei , nao tenho tempo de esta indo nos correios..",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "556e5259e2d5b0cbeec371d7a22bef5a",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "O produto veio estragado",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "f4ac38a0c605e0acf87051fd53a414fc",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Minha mercadoria não foi entregue , já paguei a primeira fatura quero cancelar a compra pois paguei o frete e não recebi a mercadoria.\r\n",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "b2afc68cb2d3f8cbf7bf956f76c0855c",
-    "issues": [
-      {
-        "category": "quality_defect",
-        "severity": "high",
-        "evidence_quote": "PRODUTO JA CHEGOU COM DEFEITO NÃO FUCIONOU CONFORME MINHA NECESSIDADE DE USO. INFELIZMENTE ULTIMA COMPRA MINHA TOTALMENTE INSATISFEITO.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "156e9ca1f645798e0ddf64dfa79566cf",
-    "issues": [
-      {
-        "category": "packaging",
-        "severity": "low",
-        "evidence_quote": "Recebi apenas 1 caixa com 100 unidades, e pedi 2 caixas. ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "f76c1205c2a85f2be09fbbe71d8d0b7d",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "COMPREI DOIS PENDENTES SÓ CHEGOU UM. PRECISO SABER O QUE FOI QUE HOUVE?",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "31a0d09572da13a6a587b2986e6b1b34",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Produto veio com amassados e também não está funcionando corretamente.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "b9867004151eef78e82f18728f2a3cee",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Estou esperando há mais de vinte dias e ainda não recebi meu produto e não consigo nenhuma informação. ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "5c5486a9b74b631a072e526841ab8b46",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Estou aguardando posição da empresa para fazer a devolução do produto.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "e8ef92df93348dc8d96b1b6a8b0567ee",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "fornecedor não enviou o produto correto. solicitei o sabor chocolate e me foi enviado outro sabor.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "d838d6e37f4ee0ce4d0a56e5d5211038",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "O produto ainda não chegou",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "db64106aff6c7180cb841937f43f5f44",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Ainda não recebi o produto...",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "485d8767d19fdfb75652a75ffcc45955",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Na propaganda está escrito Mixer elétrico e veio um portátil que eu tenho três que quebrou por isso eu queria um elétrico, vocês devem especificar melhor os produtos ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.2,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "d6b0a9e1cc2bd827de2f63af37710456",
-    "issues": [
-      {
-        "category": "other",
-        "severity": "low",
-        "evidence_quote": "Comprei 2 produtos so mandaram 1 e n mim deram nenhuma justificativa ! ",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.8,
-    "actionable_for_seller": false,
-    "confidence": 0.5
-  },
-  {
-    "review_id": "ef53057f3251e89611bcbc665e575765",
-    "issues": [
-      {
-        "category": "delivery_late",
-        "severity": "medium",
-        "evidence_quote": "Tive problema na entrega, pois não tinha ninguém em casa para receber a mercadoria no horário que passaram.",
-        "evidence_quote_en": ""
-      }
-    ],
-    "sentiment_score": -0.5,
-    "actionable_for_seller": true,
-    "confidence": 0.5
-  },
-  {
     "review_id": "7dcd9012da02a79fb7b0eeff1bf4b8d4",
     "issues": [
       {
@@ -209954,5 +207812,2254 @@
     "sentiment_score": -0.8,
     "actionable_for_seller": true,
     "confidence": 0.5
+  },
+  {
+    "review_id": "9314d6f9799f5bfba510cc7bcd468c01",
+    "issues": [
+      {
+        "category": "other",
+        "severity": "low",
+        "evidence_quote": "SEMPRE RECEBI E ESSA COMPRA AGORA ME DECPCIONOU",
+        "evidence_quote_en": "I always received it and this purchase disappointed me"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.8
+  },
+  {
+    "review_id": "2c5e27fc178bde7ac173c9c62c31b070",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "Não gostei ! Comprei gato por lebre",
+        "evidence_quote_en": "I didn't like it! I bought a cat for a fiddle"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "58044bca115705a48fe0e00a21390c54",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Sempre compro pela Internet e a entrega ocorre antes do prazo combinado, que acredito ser o prazo máximo. No stark o prazo máximo já se esgotou e ainda não recebi o produto.",
+        "evidence_quote_en": "I always buy online and delivery occurs before the agreed deadline, which I believe is the maximum deadline. But now the maximum deadline has been exhausted and I still haven't received the product."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "9fd59cd04b42f600df9f25e54082a8d1",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Nada de chegar o meu pedido.",
+        "evidence_quote_en": "My order did not arrive."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "e233e51d11511bf30e568c76360ace52",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "recebi somente 1 controle Midea Split ESTILO.\r\nFaltou Controle Remoto para Ar Condicionado Consul",
+        "evidence_quote_en": "I only received 1 Midea Split ESTILO remote control.\r\nThe remote control for the air conditioner Consul was missing."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "6d06808638ec0701bccd70bc8d462c28",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "O produto não chegou no prazo estipulado e causou transtorno, pq programei a viagem de férias do meu filho, baseado no prazo. Moro na Bahia e ele em Cuiabá sozinho. Agora, a casa está vazia.",
+        "evidence_quote_en": "The product did not arrive on the scheduled date and caused inconvenience, as I programmed my son's vacation trip based on the schedule. I live in Bahia and he is alone in Cuiabá. Now, the house is empty."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "8b230a1373c6dc4bd867099fda1d7039",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "só recebi uma",
+        "evidence_quote_en": "I only received one"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "cb2fc3e5711b5ae85e0491ee18af63ed",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "medium",
+        "evidence_quote": "não condiz com a foto do anúncio",
+        "evidence_quote_en": "does not match the ad photo"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "60c714ed14cef913944a3147094a4742",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Produto muito inferior, mal acabado",
+        "evidence_quote_en": "Very inferior product, poorly finished"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "0bd4dcc4f6c4621baf37f73495cad8c4",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "low",
+        "evidence_quote": "Entrega no prazo",
+        "evidence_quote_en": "Delivery on time"
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": false,
+    "confidence": 0.8
+  },
+  {
+    "review_id": "65dfeb60c40e3cbb0a1838285d86f885",
+    "issues": [
+      {
+        "category": "seller_communication",
+        "severity": "high",
+        "evidence_quote": "Pedi reembolso e sem resposta até momento",
+        "evidence_quote_en": "I requested a refund and have not received any response to date"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "ff722b4c68783a4459a3adb9bb4e1d0d",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Produto chegou, mas meu PC não conseguiu reconhecer as portas USB.",
+        "evidence_quote_en": "The product arrived, but my PC could not recognize the USB ports."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "ae728c1061bf163b4bd256ad9ee0bb83",
+    "issues": [
+      {
+        "category": "other",
+        "severity": "low",
+        "evidence_quote": "Este foi o pedido\r\nBalde Com 128 Peças - Blocos De Montar 2 un - R$ 25,00 cada (NÃO FOI ENTREGUE)\r\nVendido e entregue targaryen\r\nTapete de Eva Nº Letras 36 Peças Crianças 1 un - R$ 35,90 (ESTE FOI ENTREG",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": false,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "72730619a00e0ecdecf0a4ff862d8996",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "comprei tres pacotes de cinco folhas cada de papel transfer para tecido escuro e so recebi dois",
+        "evidence_quote_en": "I bought three packages of five sheets each of transfer paper for dark fabric and only received two"
+      }
+    ],
+    "sentiment_score": -0.7,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "5c37d7ba6ef2f031c34bb4fda3454018",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Demorou de mais pra entrega",
+        "evidence_quote_en": "The delivery took too long"
+      }
+    ],
+    "sentiment_score": -0.6,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "46d8249ea59101c7288936c3e6f155d7",
+    "issues": [
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "Não houve comunicado do loja",
+        "evidence_quote_en": "There was no communication from the store"
+      },
+      {
+        "category": "delivery_late",
+        "severity": "medium",
+        "evidence_quote": "A entrega foi dividida em duas",
+        "evidence_quote_en": "The delivery was split into two"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "346317f9aff540395fe46893611854f8",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Não funciona não faz sincronismo",
+        "evidence_quote_en": "It doesn't work, it doesn't sync"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "c422274e50e900b46fee429016c5458d",
+    "issues": [],
+    "sentiment_score": 0.0,
+    "actionable_for_seller": false,
+    "confidence": 0.0
+  },
+  {
+    "review_id": "487f8ff16eaf366dc7c01652202048c3",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Chegou apenas uma peça",
+        "evidence_quote_en": "Only one piece arrived"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "ef8ae544c432bb1053ba5990bd0d6227",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "EU NÃO RECEBI O PRODUTO",
+        "evidence_quote_en": "I DID NOT RECEIVE THE PRODUCT"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "aaab917291fea34988b9a0cb60e0716f",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "enviaram um relógio feminino, bem menor que as especificações do anúncio",
+        "evidence_quote_en": "they sent a women's watch, much smaller than the specifications in the listing"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "5f938e5f5f2e9a75710b54feeb9ea610",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "A peça não serviu",
+        "evidence_quote_en": "The piece did not fit"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "d7ea05bb4f9c77d606fd90b1a27e317d",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "comprei o produto dia 25 de fevereiro e hoje dia 29 de março não fora entregue na minha residência",
+        "evidence_quote_en": "I bought the product on February 25 and it was not delivered to my residence on March 29"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "185cb85ede91009d7a8e685687c037ee",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "fiz minha compra faz 30 dias e não recebi ainda meu produto",
+        "evidence_quote_en": "I made my purchase 30 days ago and I still haven't received my product"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "57e994485c2ebd293e4fa9cd62e5bb96",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "só me enviaram um lustre",
+        "evidence_quote_en": "only sent one chandelier"
+      },
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "Abri reclamação, mas ainda não recebi resposta",
+        "evidence_quote_en": "I opened a complaint, but I haven't received a response yet"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "c40a6b6e0181e5ec0d12cbc2e12c49d3",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Faltou 1 produto",
+        "evidence_quote_en": "One product was missing"
+      },
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "os que recebi 1 veio quebrado",
+        "evidence_quote_en": "one of the received items was broken"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "06f47dacd0575e592bf6a17e922ce6cd",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "aqui está descrevendo como entregue só que ate agora não recebi",
+        "evidence_quote_en": "describing the delivery, but I haven't received it yet"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "4656b8ed41c17f6be05e911e211ecd8f",
+    "issues": [],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": false,
+    "confidence": 0.8
+  },
+  {
+    "review_id": "6b341682ab39af9fa00d72d7388c903b",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "Comprar um produto correto na capa mas interno ser outro",
+        "evidence_quote_en": "Buy a product with the correct cover but the inside is different"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "e4f0765c572989acb3d2d17c911ccce4",
+    "issues": [],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": false,
+    "confidence": 0.7
+  },
+  {
+    "review_id": "557ae9c16a8ea3909db2fc5a01bc5151",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Chegaram 2 num dia e as outras 2 quase 48 horas depois",
+        "evidence_quote_en": "2 arrived on one day and the other 2 almost 48 hours later"
+      },
+      {
+        "category": "seller_communication",
+        "severity": "high",
+        "evidence_quote": "Contato com a loja muito dificil,tanto via e-mail qto por telef",
+        "evidence_quote_en": "Contact with the store was very difficult, both via email and by phone"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "cde97e23deec3aa11e838402378706ee",
+    "issues": [
+      {
+        "category": "other",
+        "severity": "low",
+        "evidence_quote": "",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": false,
+    "confidence": 0.8
+  },
+  {
+    "review_id": "3ff8285931cc9b54c9ad22ba78957f63",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Comprei dois produtos e recebi somente um",
+        "evidence_quote_en": "I bought two products and received only one"
+      },
+      {
+        "category": "seller_communication",
+        "severity": "high",
+        "evidence_quote": "Mandei dois emails para a loja e não tive nenhum retorno",
+        "evidence_quote_en": "I sent two emails to the store and received no response"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "fdb0e5a14fb6456e28ce7b3b054b8843",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "A mercadoria foi entregue após o prazo e quase 1 mês após a compra.",
+        "evidence_quote_en": "The merchandise was delivered after the deadline and almost a month after the purchase."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "a36150969fe6bd09ed011dd78aeb0189",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "medium",
+        "evidence_quote": "Demora na entrega",
+        "evidence_quote_en": "Delivery is delayed"
+      },
+      {
+        "category": "seller_communication",
+        "severity": "high",
+        "evidence_quote": "detestei o atendimento",
+        "evidence_quote_en": "I detested the service"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "43992f6d75ecc01ddd8c748b9362bc81",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "o meu produto não chegou",
+        "evidence_quote_en": "My product did not arrive"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "8b4c14417bccab81710772ecb8b23fd6",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "produto deu defeito na 1 vez de uso.",
+        "evidence_quote_en": "The product failed after the first use."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "252b934455d29ca8cc070504686ecc52",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "até agora não recebi o produto.",
+        "evidence_quote_en": "I have not received the product yet."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "b736ff4204044e49e39062584d06fa74",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "A loja anuncia um produto e entrega outro.",
+        "evidence_quote_en": "The store advertises one product and delivers another."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "65b934c20d632fc2df0fd4723464fa78",
+    "issues": [
+      {
+        "category": "packaging",
+        "severity": "low",
+        "evidence_quote": "Apesar de ter sido entregue rapidamente, substituíram a caixa METEORO pela caixa BORNE. Quando tentei reclamar nas lannister o sistema estaav fora do ar. A guitarra e acessórios estavam corretos.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.2,
+    "actionable_for_seller": true,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "c239d18d7e310e477d5e7b76b362db1d",
+    "issues": [
+      {
+        "category": "packaging",
+        "severity": "low",
+        "evidence_quote": "produto foi entregue com umas das alças com problemas (está faltando 1 pino de fixação)",
+        "evidence_quote_en": "the product was delivered with one of the straps having problems (one fixing pin is missing)"
+      }
+    ],
+    "sentiment_score": -0.6,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "b3df5ccdfff218d039dd166e3da759f5",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Foi marcado o dia 14/02 para entrega do pedido e no rastreamento marcava que o produto já havia sido entregue na data mas na realidade não foi entregue. O produto só foi entregue no dia 28/02.",
+        "evidence_quote_en": "The delivery was scheduled for February 14th, but the tracking showed the product was delivered on that date, which was not true. The product was actually delivered on February 28th."
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.98
+  },
+  {
+    "review_id": "c11da18223114c483b887b9914045f79",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "O PRODUTO LEVA QUASE 30 DIAS ÚTEIS , PARA CHEGAR NA SUA CASA",
+        "evidence_quote_en": "The product takes almost 30 working days to arrive at your home"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "6f885e2fd69412264d9e74e805175d53",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "veio outro produto, e não o que eu pedi, o modelo veio diferente",
+        "evidence_quote_en": "it came with another product, not the one I ordered, the model was different"
+      },
+      {
+        "category": "quality_defect",
+        "severity": "medium",
+        "evidence_quote": "a cor, veio uma capinha que não tem zíper",
+        "evidence_quote_en": "the color, a case without a zipper came"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "f7eb8792e67d53e01a224bfa9b6802b2",
+    "issues": [
+      {
+        "category": "seller_communication",
+        "severity": "high",
+        "evidence_quote": "os atendentes não sabiam o que estava acontecendo, uma bagunça",
+        "evidence_quote_en": "the attendants didn't know what was happening, a mess"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "4dd68a0dee5ede8a445f797c46bca436",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "o acabento que estava na foto era bonito a que chegou foi de um sintetico feio com um acabento todo borrado",
+        "evidence_quote_en": "The finish that was in the photo was nice, but the one that arrived was synthetic and ugly with a very messy finish"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "f55ac350831de6694d569e9c0176dacd",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "medium",
+        "evidence_quote": "não veio no dia sertões veio separado e em data separada",
+        "evidence_quote_en": "It didn't arrive on the scheduled day, it came separately on different days"
+      },
+      {
+        "category": "missing_item",
+        "severity": "medium",
+        "evidence_quote": "E muito desordenado comprei três produtos mais não veio",
+        "evidence_quote_en": "It was very disorganized, I bought three products but they didn't come"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "96ee030286f50f61c6d199bdfaa5573d",
+    "issues": [
+      {
+        "category": "other",
+        "severity": "low",
+        "evidence_quote": "muito ruim",
+        "evidence_quote_en": "very bad"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": false,
+    "confidence": 0.8
+  },
+  {
+    "review_id": "6280ca6a9e8c3a56b668ec8c5396caaf",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "medium",
+        "evidence_quote": "Passou dos dias previstos.",
+        "evidence_quote_en": "Passed the expected days."
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "968989a3b5192c9b9436fe7546acaca4",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "Ao fazer a compra do kit entendi que receberia 2 frascos de 60 cápsulas (cada) e não 2 frascos com 60 cápsulas no total.",
+        "evidence_quote_en": "When I made the kit purchase, I understood that I would receive 2 bottles of 60 capsules (each) and not 2 bottles with 60 capsules in total."
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "3db041dd46e9935752c691a2093799c2",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "Produto não recomendo não ler em nenhum dispositivo",
+        "evidence_quote_en": "I do not recommend the product, it does not work on any device."
+      }
+    ],
+    "sentiment_score": -0.7,
+    "actionable_for_seller": true,
+    "confidence": 0.8
+  },
+  {
+    "review_id": "f3f77d01a24ce4da52b6f7e83e71498d",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "não tive nenhuma resposta do cancelamento e nao consigo devolver",
+        "evidence_quote_en": "no response to the cancellation and unable to return"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "b396ba75350276a6cc1993b6627dceea",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "um produto com defeito",
+        "evidence_quote_en": "a defective product"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "f3401a1de0c152923ba58cf7b7d2b84a",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "medium",
+        "evidence_quote": "A capa protetora não é exatamente o que eu esperava deixa a desejar no tipo material e na qualidade",
+        "evidence_quote_en": "The protective cover is not exactly what I expected, it lacks in material and quality"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "ef9ef383ff6625e8e118db388ad3420d",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "medium",
+        "evidence_quote": "No site o produto parece ter melhor qualidade de material e acabamento.",
+        "evidence_quote_en": "On the website, the product seems to have better material quality and finish."
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "f4d74b17cd63ee35efa82cd2567de911",
+    "issues": [
+      {
+        "category": "packaging",
+        "severity": "high",
+        "evidence_quote": "A embalagem deixou a desejar, por pouco o produto não foi danificado, a caixa estava toda amassada.",
+        "evidence_quote_en": "The packaging was poor, the product could have been damaged, the box was all crumpled."
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "f677a419ee4910ae12bf8cb73dc0d332",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Faltaram os cabos e o manual",
+        "evidence_quote_en": "The cables and manual were missing"
+      }
+    ],
+    "sentiment_score": -0.85,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "7cae6dc895e8f5238f2300e103742ce2",
+    "issues": [
+      {
+        "category": "packaging",
+        "severity": "high",
+        "evidence_quote": "O produto foi embalado apenas com papel pardo sobre a embalagem e enviado pelos correios.",
+        "evidence_quote_en": "The product was only packed with brown paper over the packaging and sent by the post office."
+      },
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Lógico, a embalagem chegou amassada e só deus sabe se o produto está funcionando ou não, ainda não testei.",
+        "evidence_quote_en": "Of course, the packaging arrived crumpled and I don't know if the product is working or not, I haven't tested it yet."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "af41ee42a3e2dc767023449fda6c12fa",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Última vez que compro pois hoje vai fazer 1 mês que fiz a comprar e nada, e se demorar mais tempo de entregar estarei procurando meus direitos contra as lojas lannister e a targaryen.",
+        "evidence_quote_en": "Last time I buy because it's been a month since I ordered and nothing, and if it takes more time to deliver, I will be seeking my rights against the Lannister and Targaryen stores."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "4f2d420b33665f546c373953c8dfb5fd",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Não gostei do produto, material de péssima qualidade.",
+        "evidence_quote_en": "I didn't like the product, very poor quality material."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "bfd1c687738141ef5861a1a1269ca855",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Dos dois produtos comprados, foi entregue apenas um!",
+        "evidence_quote_en": "Only one of the two products ordered was delivered!"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "6724babb3b9952660bc345b5f5a4db07",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Quase um mês para entregar",
+        "evidence_quote_en": "Almost a month to deliver"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "c5efc0219f2949a8f81d5e8b39b9ca0c",
+    "issues": [
+      {
+        "category": "other",
+        "severity": "low",
+        "evidence_quote": "",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": 0.0,
+    "actionable_for_seller": false,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "5c1ba09de5c746017d406bd2cfefeca3",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "recebe apenas 01 peça do produto!",
+        "evidence_quote_en": "Only received 1 piece of the product!"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "b54c1776f5955ced2f54c711c665a025",
+    "issues": [
+      {
+        "category": "other",
+        "severity": "low",
+        "evidence_quote": "Nem fizeram a nota fiscal",
+        "evidence_quote_en": "They didn't even make the invoice"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "f4d2c6ed9bebda9d41573e30f3d629b5",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "O MP3 player não funciona, mesmo trocando a pilha diversas vezes.",
+        "evidence_quote_en": "The MP3 player doesn't work, even after changing the battery several times."
+      },
+      {
+        "category": "other",
+        "severity": "medium",
+        "evidence_quote": "Tive que devolver.",
+        "evidence_quote_en": "I had to return it."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "341ccd0a62b82793121e9ebdd1eafaf9",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "A targaryen não é de confiança não entregou a minha compra",
+        "evidence_quote_en": "Targaryen is not reliable and did not deliver my order"
+      },
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "colocou no rastreamento do pedido que foi entregue no dia 14/12/17 empresa falsa",
+        "evidence_quote_en": "marked as delivered on the tracking page on December 14, 2017, but the company is fake"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "0272d07f5d34a8c3d31272e7ff967e7b",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "medium",
+        "evidence_quote": "Mas dentro não tem forro",
+        "evidence_quote_en": "But the inside does not have lining"
+      },
+      {
+        "category": "quality_defect",
+        "severity": "medium",
+        "evidence_quote": "E é bem fragil",
+        "evidence_quote_en": "And it is quite fragile"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "320ae91d4c5cb8164c168fc68392a5fb",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "a minha impressora indicou que o mesmo estava vazio, e apresentou a mensagem de erro \"!\" em cima do marcador de nível da tinta",
+        "evidence_quote_en": "my printer indicated that the cartridge was empty, and showed an error message '!' above the ink level indicator"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "b92b5b1122f1298b87bc7882115db417",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Não foram entregue as duas capas de couro compradas. Apenas uma delas.",
+        "evidence_quote_en": "The two leather covers bought were not delivered. Only one of them was delivered."
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "f922b9d00a755863556181c1a366193d",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "medium",
+        "evidence_quote": "faltou o lençol de cima para ficar completo",
+        "evidence_quote_en": "the top sheet was missing to make it complete"
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.85
+  },
+  {
+    "review_id": "7c43af1205ff01c2b95065b2b02b3343",
+    "issues": [
+      {
+        "category": "other",
+        "severity": "low",
+        "evidence_quote": "Houve alguma confusão entre vendedor e o stark, pois recebi um email do stark pedindo o cancelamento do produto por algum imprevisto na entrega; neguei e recebi o produto dias depois.",
+        "evidence_quote_en": "There was some confusion between the seller and stark, as I received an email from stark requesting the cancellation of the product due to some unexpected issue with the delivery; I denied it and received the product a few days later."
+      }
+    ],
+    "sentiment_score": -0.3,
+    "actionable_for_seller": false,
+    "confidence": 0.7
+  },
+  {
+    "review_id": "f8499130452fd0f108a9a24454f51c32",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "a à alça quebrou sem muito peso",
+        "evidence_quote_en": "the strap broke without much weight"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "8eaebf463e205cdcc126801ca343a33f",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "medium",
+        "evidence_quote": "comprei o produto na cor preta e chegou na cor vermelha",
+        "evidence_quote_en": "I bought the product in black and it arrived in red"
+      }
+    ],
+    "sentiment_score": -0.7,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "5fd2d6fbe0e63511703a80078e938be5",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "Pensei que a mochila fosse um material mais resistente",
+        "evidence_quote_en": "I thought the backpack would be made of a more resistant material"
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": true,
+    "confidence": 0.8
+  },
+  {
+    "review_id": "ed2842d0aa7ac6285c7547d17f17da4d",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "Comprei um produto e veio outro.",
+        "evidence_quote_en": "I bought a product and received another one."
+      },
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "Mandei msg informando o erro , porém não obtive resposta.",
+        "evidence_quote_en": "I sent a message informing the error, but did not receive a response."
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "9a8d24623d56c13f950247baa73f4c80",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "o produto demora muita para chegar !",
+        "evidence_quote_en": "the product takes too long to arrive!"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "4b4f1f1ad3fcac5ed98109ed67b1d072",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "So recebemos um relogio pelo correio",
+        "evidence_quote_en": "So we received a watch by mail"
+      }
+    ],
+    "sentiment_score": -0.7,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "9d14b1424ca737608bc50f9d3c1a78bb",
+    "issues": [],
+    "sentiment_score": 0.8,
+    "actionable_for_seller": false,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "9ba260ed7e6a228e5e9910e035a70c7f",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Somente foi entregue uma unidade, ao invés de duas.",
+        "evidence_quote_en": "Only one unit was delivered instead of two."
+      }
+    ],
+    "sentiment_score": -0.7,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "699b866b71b5ad31f1faa2b1ab4fe1a6",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "recebi sim mais com defeito os encaixes sao dois igual e nao fecham",
+        "evidence_quote_en": "I received it, but it has defects, the joints are two the same and do not fit."
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "73a58bd10f2667a04ee95df0071d5988",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Ainda não recebi",
+        "evidence_quote_en": "I still haven't received it"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "41b377e06cb52feb5630c3ce360cd8cd",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Até agora nao recebi",
+        "evidence_quote_en": "I haven't received it yet"
+      },
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "Comprei este aparelho por questao de saude,portanto nao recomendo esta loja.",
+        "evidence_quote_en": "I bought this device for health reasons, so I do not recommend this store."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "1ff86f2ca823caab2e02507d2633081d",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "já se passou a data prevista para entrega",
+        "evidence_quote_en": "the delivery date has already passed"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "d49137ea593f67aa74446503e88aa91d",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "O produto entregue difere do pedido",
+        "evidence_quote_en": "The delivered product differs from the order"
+      },
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "trata-se de um produto inferior!",
+        "evidence_quote_en": "it is a inferior product!"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "d3b4d016ccfc708c50866b550f903b9d",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "só recebi metade do produto, anunciaram uma coisa é mandaram outra",
+        "evidence_quote_en": "only received half of the product, they advertised one thing and sent another"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "19074f5809403265fc47263ea93325ee",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "não recebi no prazo",
+        "evidence_quote_en": "did not receive on time"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "c54629f4fc4dcf65a10efb35322ec769",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Não recebi o produto",
+        "evidence_quote_en": "I did not receive the product"
+      },
+      {
+        "category": "seller_communication",
+        "severity": "high",
+        "evidence_quote": "nenhum contato por parte do .vendedor",
+        "evidence_quote_en": "no contact from the seller"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "1c6d1543dc13cb2465c63ac5de6cb4d0",
+    "issues": [
+      {
+        "category": "other",
+        "severity": "low",
+        "evidence_quote": "",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": false,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "1f836d160f50247a394034abd93b7c24",
+    "issues": [
+      {
+        "category": "other",
+        "severity": "low",
+        "evidence_quote": "",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": false,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "a835f8e62dd58cf9c07678bdd7cfb935",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "e ainda não recebi\r\npois assim já se passou a data de entrega",
+        "evidence_quote_en": "and I haven't received it yet\nsince the delivery date has already passed"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "782be3066f784bbc0a5f4f5256172488",
+    "issues": [
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "o pós venda não respondeu nenhuma das minhas perguntas",
+        "evidence_quote_en": "post-sale did not answer any of my questions"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "1489ef235189b9e5e1a9d4308bf228bd",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Comprei duas mochilas, recebi apenas uma",
+        "evidence_quote_en": "I bought two backpacks, but only received one"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "b0ac2d014efe743e181a5e8dc9cfb8ad",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "O prazo de entrega que é longo (mais de 1 mês para entregar)",
+        "evidence_quote_en": "The delivery period is long (more than 1 month to deliver)"
+      },
+      {
+        "category": "missing_item",
+        "severity": "medium",
+        "evidence_quote": "comprei 2 cartuchos e entregaram apenas 1",
+        "evidence_quote_en": "I bought 2 cartridges and only received 1"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "bbb937e9c2b62a2205af03e8a7fed42b",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "ate agora nao chegou",
+        "evidence_quote_en": "it hasn't arrived yet"
+      },
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "enviei mensagens e na ultima conversa o relogio chegaria ontem, porem nao recebi nada",
+        "evidence_quote_en": "I sent messages and in the last conversation, the watch was supposed to arrive yesterday, but I received nothing"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "608e890852fc78c3854d83a0cfab8557",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Até agora não recebi nada, a colcha estava prevista para anteontem(18/12) e até agora nada",
+        "evidence_quote_en": "I haven't received anything yet, the blanket was supposed to arrive yesterday (18/12) and I haven't received anything yet"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "cb0de6745dc7d44ff821eabbc2613df9",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Os pincéis vieram amassados",
+        "evidence_quote_en": "The brushes came crumpled"
+      },
+      {
+        "category": "quality_defect",
+        "severity": "medium",
+        "evidence_quote": "São fracos, não cabem na case e um veio descolado",
+        "evidence_quote_en": "They are weak, do not fit in the case, and one was loose"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "71f7323f884804c6d38bbcd658e07318",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "O produto veio diferente da q mostra na foto",
+        "evidence_quote_en": "The product was different from what is shown in the photo"
+      },
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "não é de luxo, nem acolchoado como dizia",
+        "evidence_quote_en": "it is not luxurious, nor padded as it said"
+      }
+    ],
+    "sentiment_score": -0.7,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "32cba2bc8e4b8a57f2063c108e2d6693",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Comprei 02 só enviaram 01",
+        "evidence_quote_en": "I bought 2 but only received 1"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.98
+  },
+  {
+    "review_id": "86b8f28757b213a5f9888c8f31f15dc5",
+    "issues": [
+      {
+        "category": "packaging",
+        "severity": "low",
+        "evidence_quote": "a tampa é estranha, parece que não fecha",
+        "evidence_quote_en": "the lid is strange, it doesn't seem to close"
+      },
+      {
+        "category": "quality_defect",
+        "severity": "low",
+        "evidence_quote": "o inox da tampa é feio",
+        "evidence_quote_en": "the lid's stainless steel is ugly"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "5bed105c6756af72c550e78d4e9bcba7",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Estou aguardando uma resposta até hoje, sobre os meus produtos, já foram pagos e ainda NÃO os recebi",
+        "evidence_quote_en": "I have been waiting for a response until today, about my products, they have already been paid for and I still haven't received them"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "cb0afd21795569cda373d39c5a0ca502",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "ainda não recebi o produto",
+        "evidence_quote_en": "I still haven't received the product"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "d34ad0ccdfa8649968e8eb3cac55e8b4",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "Gostaria de receber os produtos corretos",
+        "evidence_quote_en": "I would like to receive the correct products"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "2d0d80576ee9bbab49cc108d9ec7a0fb",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "meu produto veio com defeito",
+        "evidence_quote_en": "my product came with a defect"
+      },
+      {
+        "category": "missing_item",
+        "severity": "medium",
+        "evidence_quote": "e até hoje não recebi nenhuma notificação da empresa",
+        "evidence_quote_en": "and until today I have not received any notification from the company"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "45d1572f5bfca2707ae6748265f8169a",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "medium",
+        "evidence_quote": "Só recebemos 1 cartucho",
+        "evidence_quote_en": "We only received 1 cartridge"
+      }
+    ],
+    "sentiment_score": -0.7,
+    "actionable_for_seller": true,
+    "confidence": 0.8
+  },
+  {
+    "review_id": "8f16e30ff188fe57a427fee7afb60c90",
+    "issues": [
+      {
+        "category": "other",
+        "severity": "low",
+        "evidence_quote": "O tampo da mesa chegou todo amassado e batido.",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": false,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "a099d25e117c98a5d7ae5b70119b7f32",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "medium",
+        "evidence_quote": "poderiam agilizar como no meu outro produto que foi entregue em 2 dias.",
+        "evidence_quote_en": "they could speed it up like with my other product which was delivered in 2 days."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "f43eeb6bb515e7c94635efb799ac5901",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Até o momento eu n recebir o produto",
+        "evidence_quote_en": "Up to now I haven't received the product"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "7b66de927426b71a817aa36df5e8a0b3",
+    "issues": [],
+    "sentiment_score": 1.0,
+    "actionable_for_seller": false,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "d2b2e7612330948a735af300611bb922",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "O aparelho chegou apresentando defeito, não está apresentando todas as funções no visor digital.",
+        "evidence_quote_en": "The device arrived with a defect, it is not showing all the functions on the digital display."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "bde05133984518116b3d77d994e375d3",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "medium",
+        "evidence_quote": "O produto não está nas medidas corretas indicadas na oferta.",
+        "evidence_quote_en": "The product is not in the correct dimensions as indicated in the offer."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "253662a4cd78b84ca6547d0359fe90f6",
+    "issues": [
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "não consigo falar com ninguém",
+        "evidence_quote_en": "I can't talk to anyone"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "24203dee295cf23bd24b7ace9bca261f",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Produto mais que passou do prazo de entregar",
+        "evidence_quote_en": "The product is more than the delivery deadline"
+      },
+      {
+        "category": "seller_communication",
+        "severity": "high",
+        "evidence_quote": "não consigo falar com ninguém",
+        "evidence_quote_en": "I can't talk to anyone"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "38bcaf95057f842c3b64408733eaab1b",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Não recebi a sapateira",
+        "evidence_quote_en": "I did not receive the wardrobe"
+      }
+    ],
+    "sentiment_score": -0.7,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "4f3d4af8f472d4ccd334d4222c4e9ef4",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Deram um prazo muito grande para a entrega do produto e não conseguiram entregar no prazo",
+        "evidence_quote_en": "They gave a very long delivery time for the product and were unable to deliver on time"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "8bc4d875dbab927e9190060688edc80f",
+    "issues": [],
+    "sentiment_score": 1.0,
+    "actionable_for_seller": false,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "2165b2b26e67eee7a9d28e13c0ad0468",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Não recebi o produto",
+        "evidence_quote_en": "I did not receive the product"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "fed701d8d331019dcc29237db66c8523",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Chegou amassado...",
+        "evidence_quote_en": "It arrived crumpled..."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "1edf2a3596b417ee8485f64c7c2109ac",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "comprei tapete de borracha para tr4 mitsubishi a loja entregou um tapete de pvc horrivel",
+        "evidence_quote_en": "I bought a rubber mat for tr4 mitsubishi, the store delivered a horrible pvc mat"
+      },
+      {
+        "category": "missing_item",
+        "severity": "medium",
+        "evidence_quote": "no titulo ta tapete borracha tr4",
+        "evidence_quote_en": "in the title it says rubber mat tr4"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "f99ff17e430a53efe61d359faa3b425e",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "SOLICITEI DEVOLUÇÃO. PRODUTO COM DEFEITO",
+        "evidence_quote_en": "I REQUESTED RETURN. PRODUCT IS DEFECTIVE"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "cd9125d39cfcb70ed3967732642e4864",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Achei a qualidade do produto muito ruim",
+        "evidence_quote_en": "I found the product quality to be very poor"
+      },
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "não veio nenhuma bucha ou parafuso para fixar na parede",
+        "evidence_quote_en": "no screws or nuts came to fix on the wall"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "8c8ec6ed4210b3d764d3dd3bbe9e87d9",
+    "issues": [
+      {
+        "category": "other",
+        "severity": "low",
+        "evidence_quote": "infelizmente não compensa como antes",
+        "evidence_quote_en": "unfortunately it doesn't pay off like before"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": false,
+    "confidence": 0.8
+  },
+  {
+    "review_id": "fb9c35dd3f4294381b42154f21186e83",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "MEU PRODUTO AINDA NÃO FOI ENTREGUE",
+        "evidence_quote_en": "MY PRODUCT HAS NOT BEEN DELIVERED YET"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "2464e0bf2ea1b52aa5552b70e5a10dfa",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "A cortina não é o modelo que pedi.",
+        "evidence_quote_en": "The curtain is not the model I ordered."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "9ee1b9577cf8288c192d2060101e1db4",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "medium",
+        "evidence_quote": "A impressão está saindo com a tinta fraquinha...",
+        "evidence_quote_en": "The print is coming out with faint ink..."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "70d2258489cae12a65d36c8c09fd54c1",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "Comprei Rosa com Braços Brancos e entregam toda Preta ?",
+        "evidence_quote_en": "I bought one with white sleeves and they delivered a completely black one?"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "e0dc4bf3a60093ee76994fe44150a25c",
+    "issues": [],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": false,
+    "confidence": 0.8
+  },
+  {
+    "review_id": "90018c08b2ca29dddcf499cfa5ec54d8",
+    "issues": [
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "a atendente da lannister foi muito atenciosa",
+        "evidence_quote_en": "the lannister attendant was very attentive"
+      },
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "a loja que deveria ter me entregado o produto cancelou a comprar",
+        "evidence_quote_en": "the store that was supposed to deliver the product canceled the purchase"
+      }
+    ],
+    "sentiment_score": -0.6,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "3171979b1a7f31c323c2807e85246b47",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "a cadeira veio quebrada na parte inferior",
+        "evidence_quote_en": "the chair was broken at the bottom"
+      },
+      {
+        "category": "packaging",
+        "severity": "medium",
+        "evidence_quote": "Poderiam ter um maior cuidado na embalagem",
+        "evidence_quote_en": "they could have taken more care with the packaging"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "560effdc2aaba0ed5d37ed8a98cc6af2",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "Recebi outra boneca",
+        "evidence_quote_en": "I received another doll"
+      },
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "não consigo contato",
+        "evidence_quote_en": "can't get in touch"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "397f27a0d2936d02d3447864e0398414",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "low",
+        "evidence_quote": "",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -0.5,
+    "actionable_for_seller": false,
+    "confidence": 0.8
+  },
+  {
+    "review_id": "d8d62030afbc777000b61bdfc7312939",
+    "issues": [
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "Penso que deveria haver um modo de se comunicar com a empresa",
+        "evidence_quote_en": "I think there should be a way to communicate with the company"
+      }
+    ],
+    "sentiment_score": -0.8,
+    "actionable_for_seller": true,
+    "confidence": 0.9
+  },
+  {
+    "review_id": "3a9cc3b90bc22af3b6edec6ac5e899c8",
+    "issues": [
+      {
+        "category": "seller_communication",
+        "severity": "high",
+        "evidence_quote": "não gostei pois nunca conseguimos falar com vcs pelo telefone",
+        "evidence_quote_en": "I didn't like it because we could never talk to you by phone"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "1a91202cd7f4d5acd2bc109d5fd3c047",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "os potinhos são dificeis de abrir e fechar",
+        "evidence_quote_en": "the pots are difficult to open and close"
+      },
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "bandeja onde vai os potinhos veio com pontos de ferrugem",
+        "evidence_quote_en": "the tray where the pots go came with rust spots"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "bd9ff9329765ed79c1b081269e9f08aa",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Não recebi o jogo na cor tabaco",
+        "evidence_quote_en": "I did not receive the set in the tobacco color"
+      }
+    ],
+    "sentiment_score": -0.9,
+    "actionable_for_seller": true,
+    "confidence": 0.95
+  },
+  {
+    "review_id": "3ba4306480ae86226634b10b023a1250",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Nao foi entregue na minha casa",
+        "evidence_quote_en": "It was not delivered to my house"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "556e5259e2d5b0cbeec371d7a22bef5a",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "O produto veio estragado",
+        "evidence_quote_en": "The product arrived damaged"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "f4ac38a0c605e0acf87051fd53a414fc",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Minha mercadoria não foi entregue",
+        "evidence_quote_en": "My merchandise was not delivered"
+      },
+      {
+        "category": "seller_communication",
+        "severity": "medium",
+        "evidence_quote": "já paguei a primeira fatura quero cancelar a compra pois paguei o frete e não recebi a mercadoria.",
+        "evidence_quote_en": "I have already paid the first invoice, I want to cancel the purchase because I paid the shipping and did not receive the merchandise."
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "b2afc68cb2d3f8cbf7bf956f76c0855c",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "PRODUTO JA CHEGOU COM DEFEITO NÃO FUCIONOU CONFORME MINHA NECESSIDADE DE USO",
+        "evidence_quote_en": "THE PRODUCT CAME DEFECTED AND DID NOT WORK AS PER MY USAGE NEED"
+      },
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "INFELIZMENTE ULTIMA COMPRA MINHA TOTALMENTE INSATISFEITA",
+        "evidence_quote_en": "UNFORTUNATELY MY LAST PURCHASE WAS COMPLETELY UNSATISFACTORY"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "156e9ca1f645798e0ddf64dfa79566cf",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "Recebi apenas 1 caixa com 100 unidades, e pedi 2 caixas",
+        "evidence_quote_en": "I received only 1 box with 100 units, and I ordered 2 boxes"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "f76c1205c2a85f2be09fbbe71d8d0b7d",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "medium",
+        "evidence_quote": "COMPREI DOIS PENDENTES SÓ CHEGOU UM",
+        "evidence_quote_en": "I BOUGHT TWO PENDANTS ONLY ONE ARRIVED"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "31a0d09572da13a6a587b2986e6b1b34",
+    "issues": [
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "Produto veio com amassados",
+        "evidence_quote_en": "The product came with dents"
+      },
+      {
+        "category": "quality_defect",
+        "severity": "high",
+        "evidence_quote": "não está funcionando corretamente",
+        "evidence_quote_en": "is not working properly"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "b9867004151eef78e82f18728f2a3cee",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Estou esperando há mais de vinte dias e ainda não recebi meu produto",
+        "evidence_quote_en": "I have been waiting more than twenty days and still haven't received my product"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "5c5486a9b74b631a072e526841ab8b46",
+    "issues": [
+      {
+        "category": "other",
+        "severity": "low",
+        "evidence_quote": "",
+        "evidence_quote_en": ""
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": false,
+    "confidence": 0.5
+  },
+  {
+    "review_id": "e8ef92df93348dc8d96b1b6a8b0567ee",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "fornecedor não enviou o produto correto",
+        "evidence_quote_en": "the supplier did not send the correct product"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "d838d6e37f4ee0ce4d0a56e5d5211038",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "O produto ainda não chegou",
+        "evidence_quote_en": "the product has not arrived yet"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "db64106aff6c7180cb841937f43f5f44",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "high",
+        "evidence_quote": "Ainda não recebi o produto",
+        "evidence_quote_en": "I have not received the product yet"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "485d8767d19fdfb75652a75ffcc45955",
+    "issues": [
+      {
+        "category": "wrong_product",
+        "severity": "high",
+        "evidence_quote": "veio um portátil que eu tenho três que quebrou",
+        "evidence_quote_en": "they sent a portable one and I have three that broke"
+      },
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "comprei 2 produtos so mandaram 1",
+        "evidence_quote_en": "I bought 2 products but only sent 1"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "d6b0a9e1cc2bd827de2f63af37710456",
+    "issues": [
+      {
+        "category": "missing_item",
+        "severity": "high",
+        "evidence_quote": "comprei 2 produtos so mandaram 1",
+        "evidence_quote_en": "I bought 2 products but only sent 1"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
+  },
+  {
+    "review_id": "ef53057f3251e89611bcbc665e575765",
+    "issues": [
+      {
+        "category": "delivery_late",
+        "severity": "medium",
+        "evidence_quote": "Tive problema na entrega, pois não tinha ninguém em casa para receber a mercadoria no horário que passaram.",
+        "evidence_quote_en": "I had delivery problems because no one was home to receive the goods at the time they passed"
+      }
+    ],
+    "sentiment_score": -1.0,
+    "actionable_for_seller": true,
+    "confidence": 1.0
   }
 ]

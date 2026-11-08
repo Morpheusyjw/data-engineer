@@ -3,14 +3,14 @@
 ## 一、自动结构校验（可复现代理指标）
 - 总抽取条数：14447
 - 各类别分布：
-- other: 7961
-- delivery_late: 2888
-- quality_defect: 1464
-- seller_communication: 1128
-- wrong_product: 867
-- missing_item: 847
-- packaging: 575
-- evidence_quote 为空的条目数：0（占比 0.0%）
+- other: 7884
+- delivery_late: 2902
+- quality_defect: 1485
+- seller_communication: 1134
+- wrong_product: 886
+- missing_item: 882
+- packaging: 576
+- evidence_quote 为空的条目数：6（占比 0.0%）
 
 ## 二、防幻觉交叉验证
 对 `evidence_quote` 做校验：它必须是原评价文本的**真实子串**。

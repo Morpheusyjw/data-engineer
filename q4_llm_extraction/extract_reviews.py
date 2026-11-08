@@ -17,6 +17,7 @@
 
 from __future__ import annotations
 
+import concurrent.futures
 import json
 import logging
 import os
@@ -145,6 +146,7 @@ def llm_batch(items: list[dict], client, model: str, cost_acc: dict, use_json_mo
         temperature=0,
         **({"response_format": {"type": "json_object"}} if use_json_mode else {}),
     )
+    log.info("  → 收到 %d 条评价响应 (prompt_tokens=%s)", len(items), getattr(resp.usage, "prompt_tokens", "?"))
     usage = resp.usage
     cost_acc["prompt_tokens"] += usage.prompt_tokens
     cost_acc["completion_tokens"] += usage.completion_tokens
@@ -187,12 +189,20 @@ def run() -> int:
         "mode": "rule-based", "model": os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
     }
 
+    # 抽样验证开关：仅前 N 条送真 LLM（适配免费额度 / 快速验证），其余走规则方法
+    # 未设置或为 0 时，全部 llm_items 都送真 LLM（需足够额度）。
+    _limit = int(os.getenv("Q4_LLM_LIMIT", "0") or 0)
+    if _limit > 0 and len(llm_items) > _limit:
+        log.info("Q4_LLM_LIMIT=%d：仅前 %d 条送真 LLM，其余 %d 条走规则方法", _limit, _limit, len(llm_items) - _limit)
+        results.extend([rule_based(i["text"], i["score"], i["review_id"]) for i in llm_items[_limit:]])
+        llm_items = llm_items[:_limit]
+
     client = None
     use_json_mode = True
     if api_key and api_key.startswith("sk-"):
         try:
             from openai import OpenAI
-            client = OpenAI(api_key=api_key)
+            client = OpenAI(api_key=api_key, timeout=45, max_retries=0)
             base = os.getenv("OPENAI_BASE_URL")
             if base:
                 client.base_url = base
@@ -205,7 +215,7 @@ def run() -> int:
         try:
             from openai import OpenAI
             # Ollama 的 OpenAI 兼容端点不校验 key，随便填即可
-            client = OpenAI(api_key="ollama-local", base_url="http://localhost:11434/v1")
+            client = OpenAI(api_key="ollama-local", base_url="http://localhost:11434/v1", timeout=45, max_retries=0)
             cost_acc["model"] = os.getenv("OPENAI_MODEL", "qwen2.5:3b")
             cost_acc["mode"] = "llm-ollama"
             use_json_mode = False  # 本地端点对 json_object 支持不稳，走文本+正则兜底
@@ -215,18 +225,53 @@ def run() -> int:
             client = None
 
     if client is not None:
-        try:
-            BATCH = 10
-            for i in range(0, len(llm_items), BATCH):
-                chunk = llm_items[i:i + BATCH]
-                log.info("LLM 批量 %d/%d ...", i + BATCH, len(llm_items))
-                out = llm_batch(chunk, client, cost_acc["model"], cost_acc, use_json_mode)
-                cost_acc["calls"] += 1
+        BATCH = 3
+        THREAD_TIMEOUT = 70   # 单批硬超时（代理环境下客户端 timeout 可能不生效，线程级兜底）
+        RETRIES = 1           # 单批失败重试次数
+
+        def call_llm_safe(chunk, timeout=THREAD_TIMEOUT, retries=RETRIES):
+            """带硬超时与重试的 LLM 批量调用；失败/超时时返回 None（交由调用方转规则方法）。"""
+            for attempt in range(retries + 1):
+                ex = concurrent.futures.ThreadPoolExecutor(max_workers=1)
+                try:
+                    fut = ex.submit(
+                        llm_batch, chunk, client, cost_acc["model"], cost_acc, use_json_mode
+                    )
+                    return fut.result(timeout=timeout)
+                except concurrent.futures.TimeoutError:
+                    log.warning("⚠️ LLM 单批第 %d/%d 次超时(%ds)，%s",
+                                attempt + 1, retries + 1, timeout,
+                                "重试" if attempt < retries else "转规则方法")
+                except Exception as exc:  # noqa: BLE001
+                    log.warning("⚠️ LLM 单批第 %d/%d 次异常：%s，%s",
+                                attempt + 1, retries + 1, _ascii_safe(exc),
+                                "重试" if attempt < retries else "转规则方法")
+                finally:
+                    # 超时/异常时线程可能仍在跑（直到客户端 timeout=45 自行退出），detach 不阻塞后续批次
+                    ex.shutdown(wait=False, cancel_futures=True)
+            return None
+
+        for i in range(0, len(llm_items), BATCH):
+            chunk = llm_items[i:i + BATCH]
+            log.info("LLM 批量 %d/%d ...", i + BATCH, len(llm_items))
+            out = call_llm_safe(chunk)
+            if out is None:
+                # 仅本批转规则方法，不影响其余批次（避免单点故障级联导致全军覆没）
+                results.extend([rule_based(c["text"], c["score"], c["review_id"]) for c in chunk])
+                continue
+            cost_acc["calls"] += 1
+            # 按 review_id 映射回本批，保证每条评价恰好一个结果（防止模型多/少返回导致计数漂移）
+            by_id = {}
+            for o in out:
+                if isinstance(o, dict) and o.get("review_id"):
+                    by_id[o["review_id"]] = o
+            if by_id:
+                for c in chunk:
+                    results.append(by_id.get(
+                        c["review_id"],
+                        rule_based(c["text"], c["score"], c["review_id"])))
+            else:
                 results.extend(out)
-        except Exception as exc:  # noqa: BLE001
-            log.warning("LLM 调用失败，整体降级为规则方法：%s", _ascii_safe(exc))
-            cost_acc["mode"] += "(fallback)"
-            results.extend([rule_based(i["text"], i["score"], i["review_id"]) for i in llm_items])
     else:
         log.info("未检测到 LLM（无 OPENAI_API_KEY 且无本地 Ollama），LLM 批量部分走规则方法（完整结果仍产出）。")
         results.extend([rule_based(i["text"], i["score"], i["review_id"]) for i in llm_items])
