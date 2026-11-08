@@ -1,14 +1,15 @@
 # Q4 准确率评估报告（accuracy_evaluation.md）
 
 ## 一、自动结构校验（可复现代理指标）
-- 总抽取条数：48
+- 总抽取条数：14447
 - 各类别分布：
-- quality_defect: 24
-- delivery_late: 12
-- packaging: 12
-- wrong_product: 6
-- missing_item: 6
-- seller_communication: 6
+- other: 7961
+- delivery_late: 2888
+- quality_defect: 1464
+- seller_communication: 1128
+- wrong_product: 867
+- missing_item: 847
+- packaging: 575
 - evidence_quote 为空的条目数：0（占比 0.0%）
 
 ## 二、防幻觉交叉验证
@@ -24,7 +25,7 @@ for r in results:
 
 ## 三、最终人工校验方法（抽样 30 条）
 没有 ground truth 时，采用「人工标注 vs 机器抽取」对齐：
-1. 从 48 条中**分层抽样** 30 条（按 category 比例抽，保证覆盖各类）。
+1. 从 14447 条中**分层抽样** 30 条（按 category 比例抽，保证覆盖各类）。
 2. 由人工阅读原文，独立标注每个 issue 的 category / severity。
 3. 计算：
    - **类别准确率** = 机器 category 与人工一致数 / 30
