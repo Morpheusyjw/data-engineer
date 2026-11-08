@@ -96,7 +96,7 @@ def ingest() -> None:
             raise FileNotFoundError(f"缺少文件：{fpath}，请先下载 Olist 数据集。")
         # 先尝试 utf-8，失败回退 latin-1（Olist 个别字段含非常规字符）
         try:
-            df = pd.read_csv(fpath, encoding="utf-8", low_memory=False)
+            df = pd.read_csv(fpath, encoding="utf-8-sig", low_memory=False)
         except UnicodeDecodeError:
             df = pd.read_csv(fpath, encoding="latin-1", low_memory=False)
         df = _to_datetime_cols(df)

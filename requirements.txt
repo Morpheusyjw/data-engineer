@@ -25,3 +25,4 @@ openai>=1.30.0         # OpenAI 兼容接口（也适用于 Azure / 本地兼容
 # ---- 工程辅助 ----
 python-dotenv>=1.0.0   # 从 .env 读取 API Key 等敏感配置，避免硬编码
 tqdm>=4.66.0           # 进度条（Q3/Q4 大批量处理时可视化）
+tabulate>=0.9.0

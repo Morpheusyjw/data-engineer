@@ -24,7 +24,7 @@ order_attr AS (
         order_status,
         order_delivered_customer_date,
         order_estimated_delivery_date
-    FROM olist_orders
+    FROM olist_orders AS o
     WHERE order_purchase_timestamp >= '2017-01-01'
       AND o.order_purchase_timestamp <  '2018-01-01'
 ),
