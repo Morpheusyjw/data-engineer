@@ -185,7 +185,9 @@ def run() -> int:
                 cost_acc["calls"] += 1
                 results.extend(out)
         except Exception as exc:  # noqa: BLE001
-            log.warning("LLM 调用失败，整体降级为规则方法：%s", exc)
+            # ascii 安全：避免异常消息含非 ASCII 字符（如中文/葡语重音）时日志再次崩溃
+            safe = str(exc).encode("ascii", "replace").decode("ascii")
+            log.warning("LLM 调用失败，整体降级为规则方法：%s", safe)
             cost_acc["mode"] = "rule-based(fallback)"
             results.extend([rule_based(i["text"], i["score"], i["review_id"]) for i in llm_items])
     else:
