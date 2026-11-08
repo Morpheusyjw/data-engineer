@@ -196,6 +196,7 @@ def run() -> int:
             base = os.getenv("OPENAI_BASE_URL")
             if base:
                 client.base_url = base
+                use_json_mode = False  # 第三方兼容端点(硅基流动/DeepSeek等)对 json_object 支持不稳，走文本+正则兜底
             cost_acc["mode"] = "llm-openai"
         except Exception as exc:  # noqa: BLE001
             log.warning("OpenAI 客户端创建失败，转规则兜底：%s", _ascii_safe(exc))
