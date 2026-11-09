@@ -105,3 +105,36 @@ ORDER BY revenue DESC;
 **修正**：如第二节，把 `order_items` 先按 `order_id` 聚合成「每订单收入」，
 把 `order_reviews` 先按 `order_id` 聚合成「每订单平均分」，再与订单主表 JOIN，
 保证每个订单在聚合中只出现一次。
+
+---
+
+## 四、同一个坑，我也在自己的 Q2.3 里踩了一次（实测前后对比）
+
+写完 Q2.4 之后我回头审自己的 Q2.3，发现它有两处**同源**问题：都是「`orders` 一对多 JOIN 明细表后，
+在明细行上直接算比率/人数」，而且都不报错、行数也不变，只是数字静默偏小。
+
+| 字段 | 第一版（错） | 修正后 | 根因 |
+|---|---|---|---|
+| `unique_customers`（TOP1 卖家） | 243（== `order_count`，显然不合理） | 238 | `olist_orders.customer_id` 是**按订单生成的代理键**，一单一个，`COUNT(DISTINCT)` 恒等于订单数；真实复购要用 `olist_customers.customer_unique_id` |
+| `late_delivery_rate` | 0.0304 | 0.0336 | 原写法 `AVG(未送达 → 0)` 把「还没送到」算成「没迟到」，分母被稀释；改为「未送达 / 缺时间 → NULL，不参与分母」 |
+| `avg_review_score` | 4.230 | 4.261 | `order_items` 一单多行时，`AVG(review_score)` 按商品行数加权，商品多的订单权重被放大；改为先聚合到「卖家 × 订单」粒度再取平均 |
+
+修正后的结构（Q2.3 实际实现）：
+
+```sql
+WITH order_gmv AS (            -- 先聚合到「卖家 × 订单」，一单一行
+    SELECT seller_id, order_id, SUM(price + freight_value) AS order_gmv
+    FROM olist_order_items JOIN olist_orders USING (order_id)
+    WHERE ... GROUP BY seller_id, order_id
+),
+order_attr AS (                -- 订单级属性 + 真实的客户自然键
+    SELECT o.order_id, c.customer_unique_id, o.order_status,
+           o.order_delivered_customer_date, o.order_estimated_delivery_date
+    FROM olist_orders o JOIN olist_customers c ON o.customer_id = c.customer_id
+)
+SELECT ... COUNT(DISTINCT oa.customer_unique_id) AS unique_customers ...
+```
+
+**为什么值得写进反思**：性能问题会让你「跑得慢」，口径问题会让你「跑得对但答案是错的」，
+后者更贵——因为没人会去看一个正常的数字。判断方法只有一个：**拿业务常识校验结果**
+（一个卖家的「不重复客户数」怎么会精确等于订单数？）。
