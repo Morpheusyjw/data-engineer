@@ -138,9 +138,8 @@ def download_online_retail() -> bool:
     说明：该数据集在 Kaggle 上为**公开数据集**，kagglehub 支持匿名下载，
     因此 **无需 Kaggle 账号** 即可获取（已实测：无需 ~/.kaggle/kaggle.json）。
 
-    幂等说明：目标文件已存在通常跳过；若同级有 `.demo` 标记
-    （gen_demo_data.py 生成的演示数据），则判定为占位脏数据，主动删除后重下，
-    避免演示数据冒充真实数据导致分析失真。
+    幂等说明：目标文件已存在通常跳过；若同级有 `.demo` 标记，
+    则判定为占位/演示数据，主动删除后重下，避免非真实数据混入分析。
     """
     if ONLINE_RETAIL_TARGET.exists():
         if (DATA_DIR / ".demo").exists():

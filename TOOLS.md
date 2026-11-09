@@ -71,7 +71,7 @@
 > 比如 line_profiler、memory_profiler、pytest 等
 
 - **pandas / SQL `EXPLAIN`**：定位 Q2.4 的 JOIN 行膨胀、验证索引效果。
-- **tqdm + 断言（`assert`）**：Q3 跑批时看进度，用 `validate_output()` 断言抓出"演示数据退货命中 0%"的 bug。
+- **tqdm + 断言（`assert`）**：Q3 跑批时看进度；`validate_output()` 断言「行数/退货条数/匹配率区间」，把静默错误变成显式失败。
 - **`utf-8-sig` 读 CSV**：调试 Q2 翻译表列名错乱（BOM 问题）的关键。
 
 ---
