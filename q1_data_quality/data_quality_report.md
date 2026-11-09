@@ -1,9 +1,9 @@
 # Q1.1 数据质量初探报告
 
-> ⚠️ **数据来源说明**：本报告由 `q1_code.py` 基于 `data/online_retail_ii.csv` 动态生成。
-> 当前输入文件：`online_retail_ii.csv`（1,067,371 行）。
-> 若此文件并非 Kaggle 官方 Online Retail II（例如本地仅用演示用合成数据），
-> 则下列**数字仅为格式演示**，结论逻辑仍然成立；运行 `python run_all.py` 下载真实数据后将自动覆盖为真实结论。
+> **数据来源**：本报告由 `q1_code.py` 对 `data/online_retail_ii.csv` **实跑生成**，下列数字均为真实计算结果，随数据自动更新。
+> 当前输入：`online_retail_ii.csv`，**1,067,371 行 × 8 列**，日期范围 2009-12-01 ~ 2011-12-09。
+> ✅ 行数与 Kaggle 官方 *Online Retail II* 一致（1,067,371 行），可确认输入为原始数据集。
+> 原始文件可用 `python download_data.py` 重新拉取，再 `python run_all.py` 复现本报告。
 
 > 数据集：Online Retail II（英国电商交易，2009-12 ~ 2011-12）
 > 总行数：**1,067,371** 行，共 **8** 列。

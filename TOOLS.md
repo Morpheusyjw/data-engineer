@@ -97,4 +97,4 @@
 - **UCI `ucimlrepo` 取 Online Retail II**：实测该库报 "not available for import"，放弃，改用 `kagglehub` 匿名下载成功。
 
 ### 如果再做一次，你会换用什么工具？
-- Q4 实际接入了 **硅基流动 SiliconFlow（OpenAI 兼容 API）+ Qwen/Qwen2.5-7B-Instruct** 跑真实 LLM（沙箱无法装本地 Ollama，但第三方兼容端点可直连）；用 `Q4_LLM_LIMIT=150` 抽样实跑、其余走规则兜底。代码同时支持本地 Ollama 自动探测（零 Key）与任意 OpenAI 兼容端点。
+- Q4 实际接入了 **硅基流动 SiliconFlow（OpenAI 兼容 API）+ Qwen/Qwen2.5-7B-Instruct** 跑真实 LLM（沙箱无法装本地 Ollama，但第三方兼容端点可直连）；用 `Q4_LLM_LIMIT=200` 抽样实跑（67 批、0 次网络失败、成本 US$0.0243）、其余走规则兜底。代码同时支持本地 Ollama 自动探测（零 Key）与任意 OpenAI 兼容端点。

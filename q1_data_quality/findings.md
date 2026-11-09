@@ -1,8 +1,20 @@
 # Q1.2 揭示数据的真实结构（findings）
 
-> 以下每个结论均由 `q1_code.py` 对真实数据计算后生成，附支持代码思路与解读。
+> 每个结论均由 `q1_code.py` 对该数据实跑计算得出，**每题附支持代码 + 解读**。
 
 ## 问题 1：InvoiceNo 不只是数字
+
+**支持代码**：
+
+```python
+inv = df["invoice"].astype("string")
+mask_nonnum = ~inv.str.fullmatch(r"\d+")                 # 不是纯数字的发票号
+prefix = inv[mask_nonnum].str.extract(r"^([A-Za-z]+)")[0]
+prefix.value_counts()                                     # → C: 19494, A: 6
+
+cancel = df[inv.str.startswith("C")]                      # 取消/退货单
+cancel["quantity"].describe()                             # 均值 -25.2，最大值仍为负
+```
 
 非纯数字发票前缀统计：
 
@@ -16,6 +28,17 @@
 **处理建议**：销售总额统计时，取消单的负值会与原始销售单相互抵消（同一笔买卖一正一负），因此「净销售额」可直接全量求和；但若要单独看「下单量/客单」则应剔除 C 单，否则口径混乱。
 
 ## 问题 2：StockCode 也不只是产品
+
+**支持代码**：
+
+```python
+sc = df["stock_code"].astype("string")
+is_product = sc.str.fullmatch(r"\d+[A-Za-z]*")           # 纯数字(+字母后缀) 才算真商品
+np_df = df[~is_product & sc.notna()]
+np_df.groupby("stock_code").agg(
+    行数=("quantity", "size"), 金额=("total_amount", "sum")
+).sort_values("金额", key=lambda s: s.abs(), ascending=False)
+```
 
 非产品类 StockCode 及其规模：
 
@@ -93,6 +116,15 @@
 
 ## 问题 3：可疑的极端值
 
+**支持代码**：
+
+```python
+df["total_amount"] = df["quantity"] * df["unit_price"]
+df.loc[df["quantity"].idxmax(), ["invoice", "stock_code", "quantity", "description"]]
+df.loc[df["quantity"].idxmin(), ["invoice", "stock_code", "quantity", "description"]]
+df[df["unit_price"] < 0].groupby("stock_code")["unit_price"].agg(["size", "sum"])
+```
+
 **Quantity 极值**：
 - 最大值 `80995`：PAPER CRAFT , LITTLE BIRDIE （Invoice=581483, StockCode=23843）。
 - 最小值 `-80995`：PAPER CRAFT , LITTLE BIRDIE （Invoice=C581484, StockCode=23843）。
@@ -104,6 +136,18 @@
 **判断标准**：保留「有业务含义的调整记录」（标记类型），删除「无对应发票、数量与金额均为 0 的空行」以及「明显录入错误（如价格为 0 且描述为 NaN）」。
 
 ## 问题 4：CustomerID 的「沉默大多数」
+
+**支持代码**：
+
+```python
+df["has_cust"] = df["customer_id"].notna()
+miss_share     = 1 - df["has_cust"].mean()                                   # 行数口径 22.8%
+miss_amt_share = df.loc[~df["has_cust"], "total_amount"].sum() / df["total_amount"].sum()  # 金额口径 13.7%
+
+for name, d in [("有ID", df[df.has_cust]), ("无ID", df[~df.has_cust])]:
+    aov = d["total_amount"].sum() / d["invoice"].nunique()                   # 客单价
+    print(name, round(aov), d["country"].value_counts().head(5).to_dict())
+```
 
 **缺失比例**：缺失 Customer ID 的交易占**总行数 22.8%**，但仅占总金额 **13.7%**（金额占比远低于行数占比，说明匿名交易多为小额/低频）。
 

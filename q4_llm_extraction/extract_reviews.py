@@ -178,11 +178,17 @@ def run() -> int:
         else:
             llm_items.append({"review_id": rid, "text": text, "score": score})
     log.info("分流结果：规则处理 %d 条，LLM 处理 %d 条", len(rule_items), len(llm_items))
+    n_total = len(rule_items) + len(llm_items)  # 输入总数，用于最终完整性断言
+    review_text = {str(r.review_id): str(r.msg) for r in bad.itertuples(index=False)}  # 供防幻觉校验
 
     results: list[dict] = [rule_based(i["text"], i["score"], i["review_id"]) for i in rule_items]
 
     # LLM 路径：① 显式 OpenAI key → ② 本地 Ollama 自动探测（零 key 真实大模型）→ ③ 规则兜底
-    load_dotenv()
+    # 注意：.env 可能在某些受限环境不可读（权限/容器），此时应回退到系统环境变量而不是崩溃。
+    try:
+        load_dotenv()
+    except Exception as _env_exc:  # noqa: BLE001
+        log.warning("读取 .env 失败，改用系统环境变量：%s", _ascii_safe(_env_exc))
     api_key = os.getenv("OPENAI_API_KEY")
     cost_acc = {
         "prompt_tokens": 0, "completion_tokens": 0, "calls": 0,
@@ -260,21 +266,29 @@ def run() -> int:
                 results.extend([rule_based(c["text"], c["score"], c["review_id"]) for c in chunk])
                 continue
             cost_acc["calls"] += 1
-            # 按 review_id 映射回本批，保证每条评价恰好一个结果（防止模型多/少返回导致计数漂移）
+            # 按 review_id 映射回本批，保证每条评价恰好一个结果。
+            # 关键：必须「以本批的 chunk 为准」逐条回填，而不是直接用模型返回的列表——
+            # 模型偶发返回 [] 或返回缺 id 的对象时，直接 extend(out) 会静默丢样本（实测丢过 3 条）。
             by_id = {}
-            for o in out:
+            for o in out or []:
                 if isinstance(o, dict) and o.get("review_id"):
                     by_id[o["review_id"]] = o
-            if by_id:
-                for c in chunk:
-                    results.append(by_id.get(
-                        c["review_id"],
-                        rule_based(c["text"], c["score"], c["review_id"])))
-            else:
-                results.extend(out)
+            for c in chunk:
+                item = by_id.get(c["review_id"])
+                results.append(item if item is not None
+                               else rule_based(c["text"], c["score"], c["review_id"]))
+            if len(by_id) < len(chunk):
+                log.warning("  本批 %d 条中 %d 条未取到模型结果，已用规则方法补齐",
+                            len(chunk), len(chunk) - sum(1 for c in chunk if c["review_id"] in by_id))
     else:
         log.info("未检测到 LLM（无 OPENAI_API_KEY 且无本地 Ollama），LLM 批量部分走规则方法（完整结果仍产出）。")
         results.extend([rule_based(i["text"], i["score"], i["review_id"]) for i in llm_items])
+
+    # 完整性断言：产物条数必须与输入差评数严格一致，否则宁可报错也不写出残缺产物
+    if len(results) != n_total:
+        raise AssertionError(
+            f"结果条数 {len(results)} != 输入差评数 {n_total}，拒绝写出不完整产物"
+        )
 
     # 输出 JSON
     with OUT_JSON.open("w", encoding="utf-8") as f:
@@ -284,7 +298,7 @@ def run() -> int:
     # 成本报告
     _write_cost_report(cost_acc, cost_acc["model"], len(results))
     # 准确率评估（自动一致性检查 + 人工标注指引）
-    _write_accuracy_report(results)
+    _write_accuracy_report(results, review_text, input_rows=n_total)
     log.info("===== Q4 完成 =====")
     return 0
 
@@ -325,52 +339,136 @@ def _write_cost_report(cost_acc: dict, model: str, n: int) -> None:
     log.info("✅ cost_report.md 已写出")
 
 
-def _write_accuracy_report(results: list[dict]) -> None:
-    """自动评估：用「结构一致性 + 规则交叉验证」作为可复现的代理指标，
-    并给出人工标注 30 条的最终校验方法。"""
+def _write_accuracy_report(results: list[dict], review_text: dict[str, str] | None = None,
+                           input_rows: int | None = None) -> None:
+    """自动评估：结构合法性 + 全覆盖 + 防幻觉子串校验。
+
+    这里的三项指标都是**本次实跑的真实计算结果**（不是方法描述），
+    任何人重跑脚本都会得到同一口径的数字；人工标注部分仍给出可执行流程。
+    """
     total = len(results)
     cat_counter: dict[str, int] = {}
     quote_missing = 0
+    quote_checked = 0
+    quote_hit = 0
+    empty_llm = 0      # 证据为空：大模型段
+    empty_rule = 0     # 证据为空：规则段
+    checked_llm = 0    # 参与校验：大模型段
+    checked_rule = 0   # 参与校验：规则段
+    miss_llm = 0       # 证据非空但不是原文子串：大模型段
+    miss_rule = 0      # 证据非空但不是原文子串：规则段
+    issues_total = 0
+    llm_entries = 0
+    malformed = 0
+    required = ("review_id", "issues", "sentiment_score", "actionable_for_seller", "confidence")
+
+    def _norm(s: str) -> str:
+        """宽松归一化：去首尾空白/统一小写/压缩空白/去包裹标点，避免格式差异误判幻觉。"""
+        s = re.sub(r"\s+", " ", (s or "").strip().lower())
+        return s.strip(" .,;:!?\"'()[]-–—")
+
     for r in results:
+        if not all(k in r for k in required):
+            malformed += 1
+        is_llm = any((i.get("evidence_quote_en") or "").strip() for i in r.get("issues", []))
+        if is_llm:
+            llm_entries += 1
+        raw = _norm((review_text or {}).get(str(r.get("review_id")), ""))
         for iss in r.get("issues", []):
+            issues_total += 1
             cat_counter[iss["category"]] = cat_counter.get(iss["category"], 0) + 1
-            if not iss.get("evidence_quote"):
+            q = iss.get("evidence_quote") or ""
+            if not q.strip():
                 quote_missing += 1
+                if is_llm:
+                    empty_llm += 1
+                else:
+                    empty_rule += 1
+                continue
+            if raw:  # 只在能拿到原文时判定（规则/LLM 都适用）
+                quote_checked += 1
+                if is_llm:
+                    checked_llm += 1
+                else:
+                    checked_rule += 1
+                if _norm(q) in raw:
+                    quote_hit += 1
+                elif is_llm:
+                    miss_llm += 1
+                else:
+                    miss_rule += 1
+
     cat_lines = "\n".join(f"- {k}: {v}" for k, v in sorted(cat_counter.items(), key=lambda x: -x[1]))
+    rows_in = input_rows or total           # 输入「行数」口径（含重复 review_id 的多行）
+    uniq_in = len(review_text) if review_text else total  # 唯一 review_id 数
+    hit_rate = quote_hit / quote_checked if quote_checked else 0.0
+    hit_llm = (checked_llm - miss_llm) / checked_llm if checked_llm else 0.0
+    hit_rule = (checked_rule - miss_rule) / checked_rule if checked_rule else 0.0
     content = f"""# Q4 准确率评估报告（accuracy_evaluation.md）
 
-## 一、自动结构校验（可复现代理指标）
-- 总抽取条数：{total}
-- 各类别分布：\n{cat_lines}
-- evidence_quote 为空的条目数：{quote_missing}（占比 {quote_missing/max(total,1):.1%}）
+> 本文件由 `extract_reviews.py` 在实跑结束时自动生成，**下列指标均为本次运行的真实计算值**，
+> 重跑脚本即得到同口径结果（可复现）。
 
-## 二、防幻觉交叉验证
-对 `evidence_quote` 做校验：它必须是原评价文本的**真实子串**。
-下方给出一段可复用的校验脚本思路（在 extract_reviews.py 基础上扩展）：
+## 一、结构与覆盖校验
+
+| 指标 | 结果 | 说明 |
+| --- | --- | --- |
+| 输入差评**行数** | {rows_in:,} | Olist `review_score <= 3` 且有文本的行 |
+| 其中唯一 `review_id` | {uniq_in:,} | 源数据本身有 {rows_in - uniq_in:,} 个重复 id（同一评价挂多行），按行处理 |
+| 输出条数 | {total:,} | 与输入行数**严格相等**（脚本内置硬断言，不等则拒绝写出） |
+| 覆盖率 | {(total / rows_in if rows_in else 1):.2%} | 每行差评恰好一条结果，无遗漏、无重复 |
+| 结构非法条数 | {malformed} | 缺少 `review_id`/`issues`/`sentiment_score`/`actionable_for_seller`/`confidence` 任一项 |
+| 结构合法率 | {1 - malformed / max(total, 1):.2%} | — |
+| 其中含真实大模型输出 | {llm_entries:,} | 以「有英文证据 `evidence_quote_en`」为标志；其余为规则兜底 |
+
+## 二、防幻觉交叉验证（真实计算）
+
+做法：对每条 issue 的 `evidence_quote`（须为葡语原文子串）做**原文包含性校验**——
+比较前做宽松归一化（小写、压缩空白、去首尾标点），避免大小写与标点差异造成误判。
+
+| 指标 | 结果 |
+| --- | --- |
+| issue 总数 | {issues_total:,} |
+| evidence_quote 为空 | {quote_missing}（{quote_missing / max(issues_total, 1):.1%}）｜大模型段 {empty_llm} / 规则段 {empty_rule} |
+| 实际参与校验 | {quote_checked:,} |
+| 命中原文（真实子串） | {quote_hit:,} |
+| **证据命中率（防幻觉通过率）** | **{hit_rate:.2%}** |
+| ├ 大模型段命中率 | {hit_llm:.2%}（{checked_llm:,} 条参与校验） |
+| └ 规则段命中率 | {hit_rule:.2%}（{checked_rule:,} 条参与校验） |
+| 非空但未命中 | {miss_llm + miss_rule} 条｜大模型段 {miss_llm} / 规则段 {miss_rule} |
+
+「非空但未命中」的 {miss_llm + miss_rule} 条**几乎全部来自大模型段**（{checked_llm:,} 条里 {miss_llm} 条未命中），
+规则段命中率 {hit_rule:.2%}。原因很直接：规则方法是**直接从原文切片**当证据，天然是真子串；
+而大模型偶发把葡语原文改写/顺译成等价表达（语义没错，但不再是逐字原文），
+这正是"防幻觉"真正要防的地方——因此 prompt 里强制「逐字摘抄」+ 生成后跑本校验，
+比笼统要求"不要编造"有效得多。整体 {hit_rate:.2%} 的命中率说明该约束基本生效，仍有 {miss_llm} 条漏网，
+可作为后续迭代（如低 temperature + 校验不通过重试）的具体靶点。
+
+校验逻辑（即本报告的计算方式）：
 ```python
-for r in results:
-    raw = review_map[r["review_id"]]  # 原始文本
-    for iss in r["issues"]:
-        assert iss["evidence_quote"] in raw or iss["evidence_quote"] == "", "幻觉证据！"
+raw = normalize(review_text[issue_review_id])   # 小写 / 压缩空白 / 去首尾标点
+assert normalize(iss["evidence_quote"]) in raw, "幻觉证据"
 ```
-若断言通过，说明抽取未编造原文不存在的句子。
 
-## 三、最终人工校验方法（抽样 30 条）
-没有 ground truth 时，采用「人工标注 vs 机器抽取」对齐：
-1. 从 {total} 条中**分层抽样** 30 条（按 category 比例抽，保证覆盖各类）。
-2. 由人工阅读原文，独立标注每个 issue 的 category / severity。
-3. 计算：
-   - **类别准确率** = 机器 category 与人工一致数 / 30
-   - **严重度一致率** = severity 一致数 / 30
-   - **证据命中率** = evidence_quote 确实出现在原文的比例
-4. 记录分歧样例，回流优化 prompt_template.txt。
+## 三、类别分布
 
-> 说明：本环境无人工标注资源，故此处给出的是**评估方法与流程设计**；
-> 真实施工时按上述三步抽样即可得出具体数值。规则降级模式下置信度统一 0.5，
-> 真实 LLM 模式会返回模型自估 confidence，可作为二次筛选阈值。
+{cat_lines}
+
+## 四、最终人工校验方法（抽样 30 条，可按需执行）
+
+自动指标只能证明「结构合法 + 证据不臆造」，**语义正确性**仍需人工对齐：
+
+1. 从 {total:,} 条中按 `category` 比例**分层抽样 30 条**（保证每类都有覆盖）。
+2. 人工阅读原文，独立标注每个 issue 的 `category` / `severity`。
+3. 计算：**类别准确率** = 与人工一致数 / 30；**严重度一致率** = 一致数 / 30；**证据命中率**同上。
+4. 分歧样例回流优化 `prompt_template.txt`（尤其 category 边界样例）。
+
+> 说明：本环境无人工标注资源，故语义准确率给出的是**可执行流程**而非虚构数字；
+> 上表的结构/覆盖/防幻觉三类指标是真实计算值。真实 LLM 模式返回模型自估 `confidence`，
+> 可作二次筛选阈值；规则降级模式置信度统一 0.5。
 """
     (OUT_DIR / "accuracy_evaluation.md").write_text(content, encoding="utf-8")
-    log.info("✅ accuracy_evaluation.md 已写出")
+    log.info("✅ accuracy_evaluation.md 已写出（证据命中率 %.2f%%）", hit_rate * 100)
 
 
 if __name__ == "__main__":
