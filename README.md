@@ -655,7 +655,7 @@ python run_all.py             # 自动下载数据 → Q1→Q5 + Bonus
 | Q1.1 | `q1_data_quality/q1_code.py` | `data_quality_report.md` | 106.7 万行 × 8 列，报出 6 个反直觉现象 |
 | Q1.2 | 同上 | `findings.md` | 4 个问题全部「动态算数 + 支持代码」，不是写死结论 |
 | Q1.3 | — | `cleaning_strategy.md` | 按 A/B/C 三种用途分层，并写明「不该删什么」 |
-| Q2.1–2.4 | `q2_sql_analysis/*.sql`、`run_q2.py` | `q2_results.md` | 9 表灌 MySQL 8.0；2 个缺翻译类目 + JOIN 行膨胀；**另修 2 处静默口径错误**，并自动生成 8 条数据洞察 |
+| Q2.1–2.4 | `q2_sql_analysis/*.sql`、`run_q2.py` | `q2_results.md` | 9 表灌 MySQL 8.0；2 个缺翻译类目 + JOIN 行膨胀；**另修 3 处静默口径错误**（Q2.2 再修 1 处加权），并自动生成 8 条数据洞察 |
 | Q3.1 | `q3_etl_pipeline/pipeline.py` | `validation_report.md` | 星型模型 + RFM；退货匹配 34.98% 并逐层归因；10 条断言 + 8.6 s / 106 万行 + 哈希指纹 |
 | Q4.1 | `q4_llm_extraction/extract_reviews.py` | `extracted_issues.json`、`cost_report.md`、`accuracy_evaluation.md` | 14,447 条；真实大模型 US$0.0243；证据命中率 99.96% |
 | Q5.1 | — | `real_time_pipeline_design.md` | Kafka→Flink→ClickHouse/Redis，含架构图与成本量化 |
