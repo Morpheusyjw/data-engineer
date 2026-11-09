@@ -202,13 +202,24 @@ def analyze_findings(df: pd.DataFrame) -> None:
     # 取消单（C 开头）的 Quantity/UnitPrice 特征
     cancel = df[inv.str.startswith("C")]
     cancel_qty = cancel["quantity"]
+
+    # A 开头：坏账核销调整（描述、金额、客户是否为空都要自己算，不能靠猜）
+    a_df = df[inv.str.startswith("A")]
+    a_amt = (a_df["quantity"] * a_df["unit_price"]).sum()
+    a_desc = a_df["description"].dropna().unique().tolist()
+    a_no_cust = int(a_df["customer_id"].isna().sum())
     p1_note = (
         f"以 `C` 开头的发票共 **{len(cancel):,}** 笔，其 Quantity 全部为负"
-        f"（均值 {cancel_qty.mean():.1f}），这是**取消/退货**单。"
-        f"其余字母前缀（如本数据中罕见的其他前缀）多为手工调整。"
-        f"\n\n**处理建议**：销售总额统计时，取消单的负值会与原始销售单相互抵消"
+        f"（均值 {cancel_qty.mean():.1f}），这是**取消/退货**单。\n\n"
+        f"以 `A` 开头的共 **{len(a_df)}** 笔，描述统一为 "
+        f"`{'/'.join(str(d) for d in a_desc[:3])}`，合计 **−£{abs(a_amt):,.2f}**"
+        f"（相当于全量金额的 {abs(a_amt) / df['total_amount'].sum():.2%}，负向冲销），"
+        f"且 {a_no_cust}/{len(a_df)} 笔没有 CustomerID —— 这是**财务侧的坏账核销**，"
+        f"不是商品交易：既没有商品，也没有买家身份，做任何「销量/客户」口径都必须排除。\n\n"
+        f"**处理建议**：销售总额统计时，取消单的负值会与原始销售单相互抵消"
         f"（同一笔买卖一正一负），因此「净销售额」可直接全量求和；"
         f"但若要单独看「下单量/客单」则应剔除 C 单，否则口径混乱。"
+        f"A 单则一律单列为「坏账调整」科目，不参与销售口径——它冲的是应收，不是退货。"
     )
 
     # ---------- 问题2：StockCode 不只是产品 ----------
@@ -239,19 +250,48 @@ def analyze_findings(df: pd.DataFrame) -> None:
     # ---------- 问题3：可疑极端值 ----------
     qmax_row = df.loc[df["quantity"].idxmax()]
     qmin_row = df.loc[df["quantity"].idxmin()]
+    # 不用肉眼判断「像不像冲正」：直接找同商品、数量相反、同客户的 C 单，算时间差
+    mirror = df[
+        inv.str.startswith("C")
+        & (df["stock_code"] == qmax_row["stock_code"])
+        & (df["quantity"] == -int(qmax_row["quantity"]))
+    ]
+    max_amt = qmax_row["quantity"] * qmax_row["unit_price"]
+    max_amt_share = max_amt / df["total_amount"].sum()
+    if len(mirror):
+        gap_min = (
+            pd.to_datetime(mirror.iloc[0]["invoice_date"])
+            - pd.to_datetime(qmax_row["invoice_date"])
+        ).total_seconds() / 60
+        mirror_desc = (
+            f"同一客户（{int(qmax_row['customer_id'])}）、同一商品（`{qmax_row['stock_code']}` "
+            f"{qmax_row['description']}）在 **{gap_min:.0f} 分钟后** 开出一张数量完全相反的 "
+            f"`{mirror.iloc[0]['invoice']}`，整单退回。"
+        )
+    else:
+        gap_min = float("nan")
+        mirror_desc = "未找到与之配对的取消单。"
+
     neg_price_df = df[df["unit_price"] < 0]
+    neg_price_codes = neg_price_df["stock_code"].value_counts().to_dict()
+    neg_price_desc = neg_price_df["description"].dropna().unique().tolist()
     p3_note = (
         f"**Quantity 极值**：\n"
         f"- 最大值 `{int(qmax_row['quantity'])}`：{qmax_row['description']} "
-        f"（Invoice={qmax_row['invoice']}, StockCode={qmax_row['stock_code']}）。\n"
-        f"- 最小值 `{int(qmin_row['quantity'])}`：{qmin_row['description']} "
-        f"（Invoice={qmin_row['invoice']}, StockCode={qmin_row['stock_code']}）。\n\n"
-        f"两者绝对值相同、符号相反，且描述均为 `{'MANUAL'}/{'调整'}` 类手工记录，"
-        f"**高度疑似同一笔库存盘点的正负调整（真实业务冲正，非错误）**，应保留但单独标记。\n\n"
-        f"**UnitPrice 为负**：共 {len(neg_price_df)} 行，集中在 `BANK CHARGES`、"
-        f"`AMAZONFEE` 等调整类编码，业务上代表「扣费/退款」，不是售价。\n\n"
-        f"**判断标准**：保留「有业务含义的调整记录」（标记类型），删除「无对应发票、"
-        f"数量与金额均为 0 的空行」以及「明显录入错误（如价格为 0 且描述为 NaN）」。"
+        f"（Invoice={qmax_row['invoice']}, StockCode={qmax_row['stock_code']}, "
+        f"单价 {qmax_row['unit_price']}, 金额 **£{max_amt:,.2f}**，占全量金额 {max_amt_share:.2%}）。\n"
+        f"- 最小值 `{int(qmin_row['quantity'])}`：同商品、同客户，Invoice={qmin_row['invoice']}。\n\n"
+        f"{mirror_desc}\n\n"
+        f"**这不是「库存盘点正负冲正」，而是一笔大单的「当日作废」**：正常单件商品单笔最多几十件，"
+        f"8 万件更像是数量录错（多打了几位）或客户当场反悔。两种情况下结论一致——"
+        f"**它是无效需求**。若只按正单统计，这个 SKU 会被算成年度爆款，直接影响备货与排名；"
+        f"按净额统计则贡献为 0。所以我保留两条原始记录（审计需要），但在 `sales_facts` 里剔除 C 单，"
+        f"正单单独标记「当日冲销」并在 BI 层排除。\n\n"
+        f"**UnitPrice 为负**：共 {len(neg_price_df)} 行，全部落在 `{list(neg_price_codes)[0]}` 编码上，"
+        f"描述为 `{'/'.join(str(d) for d in neg_price_desc[:2])}` —— 即上面说的坏账核销，"
+        f"冲的是应收账款，不是商品售价，也不该出现在任何「价格分布」里。\n\n"
+        f"**判断标准**：能解释清业务含义的异常值（取消单、坏账核销、手工调整）**保留并打标**；"
+        f"无法解释、且数量与金额均为 0 的空行才删除。异常值本身是信息，删掉就再也查不出「为什么这个月 GMV 多了 16 万」。"
     )
 
     # ---------- 问题4：CustomerID 的沉默大多数 ----------
@@ -276,19 +316,59 @@ def analyze_findings(df: pd.DataFrame) -> None:
     aov_present = present["total_amount"].sum() / max(present["invoice"].nunique(), 1)
     aov_missing = missing["total_amount"].sum() / max(missing["invoice"].nunique(), 1)
 
+    # 「金额占比低 → 所以是小额」这个推论不成立，必须看单笔分布：
+    # 匿名单里混了大量 0 单价的服务/调整流水，会把均值和中位数一起拉平
+    inv_amt = df.groupby(["invoice", "has_cust"])["total_amount"].sum().reset_index()
+
+    def _inv_stats(flag: bool) -> dict:
+        d = inv_amt[inv_amt["has_cust"] == flag]["total_amount"]
+        pos = d[d > 0]
+        return {
+            "n": len(d),
+            "nonpos": int((d <= 0).sum()),
+            "mean": pos.mean(),
+            "median": pos.median(),
+            "p90": pos.quantile(0.9),
+            "big": (pos > 1000).mean(),
+        }
+
+    s_id, s_anon = _inv_stats(True), _inv_stats(False)
+    zero_price_anon = int(((df["unit_price"] == 0) & (~df["has_cust"])).sum())
+    uk_present = (present["country"] == "United Kingdom").mean()
+    uk_missing = (missing["country"] == "United Kingdom").mean()
+
     p4_note = (
         f"**缺失比例**：缺失 Customer ID 的交易占**总行数 {miss_share:.1%}**，"
-        f"但仅占总金额 **{miss_amt_share:.1%}**（金额占比远低于行数占比，"
-        f"说明匿名交易多为小额/低频）。\n\n"
+        f"但仅占总金额 **{miss_amt_share:.1%}**。\n\n"
+        f"**这里有个陷阱**：金额占比只有 {miss_amt_share:.1%}，很容易顺手写成「匿名交易都是小额低频」。"
+        f"我对了一下单笔分布，结论**反了**：匿名单共 {s_anon['n']:,} 张，其中 "
+        f"**{s_anon['nonpos']:,} 张（{s_anon['nonpos'] / s_anon['n']:.1%}）净额 ≤ 0**"
+        f"（{zero_price_anon:,} 行 0 单价的服务费/调整流水 + 退款冲销），"
+        f"这些单子把分母撑大了、把金额占比压低了，却代表不了「客单价」。\n\n"
+        f"把非正金额的单剔除后再比，差异是反过来的：\n\n"
+        f"| 单笔口径（仅净额>0 的发票） | 有 CustomerID | 无 CustomerID |\n"
+        f"|---|---:|---:|\n"
+        f"| 发票数 | {s_id['n'] - s_id['nonpos']:,} | {s_anon['n'] - s_anon['nonpos']:,} |\n"
+        f"| 中位数 | £{s_id['median']:,.0f} | £{s_anon['median']:,.0f} |\n"
+        f"| 均值 | £{s_id['mean']:,.0f} | £{s_anon['mean']:,.0f} |\n"
+        f"| P90 | £{s_id['p90']:,.0f} | £{s_anon['p90']:,.0f} |\n"
+        f"| 单笔 > £1,000 占比 | {s_id['big']:.1%} | {s_anon['big']:.1%} |\n\n"
         f"**差异对比**：\n"
         f"- 国家分布：有 ID 多为 `{_country_top(present)}`；"
-        f"无 ID 多为 `{_country_top(missing)}`。\n"
-        f"- 客单价（每发票均值）：有 ID ≈ {aov_present:,.0f}，无 ID ≈ {aov_missing:,.0f}。\n"
+        f"无 ID 多为 `{_country_top(missing)}`。英国本土占比 有 ID {uk_present:.1%}、"
+        f"无 ID {uk_missing:.1%} —— **匿名反而更「本土」**，跨境单基本都注册了（要填收货信息），"
+        f"这也侧面说明匿名的不是「海外游客」，而是本地未绑定账号的散客/批发柜台单。\n"
+        f"- 客单价：见上表——**中位数更低、均值与 P90 更高**，这是典型的两极分布，不是「整体偏小」。\n"
         f"- 高频商品：有 ID 偏好 `{_top_product(present)}`；"
         f"无 ID 偏好 `{_top_product(missing)}`。\n\n"
-        f"**推测**：匿名记录大概率是**游客/线下批发散客**（无注册账号、单次大额拿货），"
-        f"或 B2B 电话/邮件下单未绑定账号。它们不适合做「注册用户 RFM 分群」，"
-        f"但可作为独立的「非会员渠道」单独分析。"
+        f"**推测**：匿名不是一个「人群」，而是两个人群的混合——一头是**小额散客单**"
+        f"（本地市集/柜台零售，拉低中位数），另一头是**大额批发/电话邮件下单的 B2B 客户**"
+        f"（拉高均值与 P90，单笔 >£1,000 的比例是有 ID 客户的 "
+        f"{s_anon['big'] / max(s_id['big'], 1e-9):.1f} 倍）。这也解释了为什么它「行数占 22.8%、金额只占 "
+        f"{miss_amt_share:.1%}」却仍值得单独看：**被丢掉的是 22.8% 的行为，不只是 13.7% 的钱**。\n\n"
+        f"**处理建议**：RFM 分群只能用于有 ID 客户（匿名无主键，硬塞进去会污染频次）；"
+        f"匿名部分单独建「未绑定渠道」视图，且第一步必须先剔掉 0 元流水行——"
+        f"否则任何客单价指标都会被那群「没有金额的单子」拖到失真。"
     )
 
     # 每题附「支持代码」——直接取自本文件的实际计算逻辑，保证结论可复现
@@ -298,8 +378,10 @@ mask_nonnum = ~inv.str.fullmatch(r"\\d+")                 # 不是纯数字的�
 prefix = inv[mask_nonnum].str.extract(r"^([A-Za-z]+)")[0]
 prefix.value_counts()                                     # → C: 19494, A: 6
 
-cancel = df[inv.str.startswith("C")]                      # 取消/退货单
-cancel["quantity"].describe()                             # 均值 -25.2，最大值仍为负
+a = df[inv.str.startswith("A")]                           # A 单到底是什么？
+a["description"].unique()                                 # → ['Adjust bad debt']
+(a["quantity"] * a["unit_price"]).sum()                   # → -147614.08
+a["customer_id"].isna().sum(), len(a)                     # → 6 / 6（全无客户）
 ```'''
 
     code2 = '''```python
@@ -312,20 +394,32 @@ np_df.groupby("stock_code").agg(
 ```'''
 
     code3 = '''```python
-df["total_amount"] = df["quantity"] * df["unit_price"]
-df.loc[df["quantity"].idxmax(), ["invoice", "stock_code", "quantity", "description"]]
-df.loc[df["quantity"].idxmin(), ["invoice", "stock_code", "quantity", "description"]]
-df[df["unit_price"] < 0].groupby("stock_code")["unit_price"].agg(["size", "sum"])
+# 不靠肉眼判断，直接找「同商品、数量相反、同客户」的取消单并算时间差
+mx = df.loc[df["quantity"].idxmax()]
+mirror = df[inv.str.startswith("C")
+            & (df["stock_code"] == mx["stock_code"])
+            & (df["quantity"] == -int(mx["quantity"]))]
+(pd.to_datetime(mirror["invoice_date"]) - pd.to_datetime(mx["invoice_date"])).dt.total_seconds() / 60
+# → 12.0 分钟；金额 = 80995 × 2.08 = 168,469.60（占全量 0.87%）
+
+# 负单价落在哪些编码上
+df[df["unit_price"] < 0].groupby(["stock_code", "description"]).size()
+# → B / Adjust bad debt: 5 行
 ```'''
 
     code4 = '''```python
 df["has_cust"] = df["customer_id"].notna()
-miss_share     = 1 - df["has_cust"].mean()                                   # 行数口径 22.8%
-miss_amt_share = df.loc[~df["has_cust"], "total_amount"].sum() / df["total_amount"].sum()  # 金额口径 13.7%
+miss_share     = 1 - df["has_cust"].mean()                                            # 行数口径 22.8%
+miss_amt_share = df.loc[~df["has_cust"], "total_amount"].sum() / df["total_amount"].sum()   # 金额口径 13.7%
 
-for name, d in [("有ID", df[df.has_cust]), ("无ID", df[~df.has_cust])]:
-    aov = d["total_amount"].sum() / d["invoice"].nunique()                   # 客单价
-    print(name, round(aov), d["country"].value_counts().head(5).to_dict())
+# 关键：先按发票汇总，再看分布——不要用「金额占比低」直接推「小额」
+inv_amt = df.groupby(["invoice", "has_cust"])["total_amount"].sum().reset_index()
+for flag in (True, False):
+    d = inv_amt[inv_amt.has_cust == flag]["total_amount"]
+    pos = d[d > 0]                                        # 剔除 0 元服务/调整流水
+    print(flag, len(d), (d <= 0).sum(), pos.median(), pos.mean(), pos.quantile(.9), (pos > 1000).mean())
+# → 有ID: 44876 张 / 7907 张非正 / 中位 305 / 均值 480 / P90 852 / >1000 占 7.5%
+# → 无ID:  8752 张 / 5643 张非正 / 中位 220 / 均值 1039 / P90 2527 / >1000 占 29.9%
 ```'''
 
     content = f"""# Q1.2 揭示数据的真实结构（findings）
@@ -402,8 +496,9 @@ def write_cleaning_strategy() -> None:
 
 1. **取消单**：不是错误，是真实退货，退货率与净销售都依赖它。
 2. **邮费/手续费**：财务口径下的真实收入项。
-3. **极端 `Quantity`（±80,995）**：盘点正负冲正，删除会破坏对账平衡。
-4. **匿名交易**：虽不能做分群，但代表「非会员渠道」，本身是独立业务洞察。
+3. **极端 `Quantity`（±80,995）**：一笔大单的当日整单取消（`581483` → `C581484`，间隔 12 分钟），
+   正负两条要成对保留；只留正单会让这个 SKU 凭空变成年度爆款。
+4. **匿名交易**：不能做分群，但代表「非会员渠道」，本身是独立洞察。
 
 ## 三、哪些清洗是「有损」的，怎么决定
 

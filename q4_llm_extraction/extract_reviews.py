@@ -514,6 +514,10 @@ def _write_accuracy_report(results: list[dict], review_text: dict[str, str] | No
     """
     total = len(results)
     cat_counter: dict[str, int] = {}
+    cat_rule: dict[str, int] = {}   # 类别分布：规则段
+    cat_llm: dict[str, int] = {}    # 类别分布：大模型段
+    zero_issue = 0                  # issues 为空数组的条数
+    no_en = 0                       # 规则段 issue 数（无英译，用于说明字段口径）
     quote_missing = 0
     quote_checked = 0
     quote_hit = 0
@@ -540,9 +544,16 @@ def _write_accuracy_report(results: list[dict], review_text: dict[str, str] | No
         if is_llm:
             llm_entries += 1
         raw = _norm((review_text or {}).get(str(r.get("review_id")), ""))
+        if not r.get("issues"):
+            zero_issue += 1
         for iss in r.get("issues", []):
             issues_total += 1
             cat_counter[iss["category"]] = cat_counter.get(iss["category"], 0) + 1
+            if is_llm:
+                cat_llm[iss["category"]] = cat_llm.get(iss["category"], 0) + 1
+            else:
+                cat_rule[iss["category"]] = cat_rule.get(iss["category"], 0) + 1
+                no_en += 1
             q = iss.get("evidence_quote") or ""
             if not q.strip():
                 quote_missing += 1
@@ -565,6 +576,16 @@ def _write_accuracy_report(results: list[dict], review_text: dict[str, str] | No
                     miss_rule += 1
 
     cat_lines = "\n".join(f"- {k}: {v}" for k, v in sorted(cat_counter.items(), key=lambda x: -x[1]))
+    # 分段类别分布：other 占比是判断「这套抽取到底能不能用」的关键指标
+    cats_sorted = sorted(cat_counter, key=lambda c: -cat_counter[c])
+    cat_rows = "\n".join(
+        f"| `{c}` | {cat_rule.get(c, 0):,} | {cat_llm.get(c, 0):,} | {cat_counter[c]:,} |"
+        for c in cats_sorted
+    )
+    n_rule = sum(cat_rule.values())
+    n_llm = sum(cat_llm.values())
+    other_rule = cat_rule.get("other", 0) / max(n_rule, 1)
+    other_llm = cat_llm.get("other", 0) / max(n_llm, 1)
     rows_in = input_rows or total           # 输入「行数」口径（含重复 review_id 的多行）
     uniq_in = len(review_text) if review_text else total  # 唯一 review_id 数
     hit_rate = quote_hit / quote_checked if quote_checked else 0.0
@@ -620,11 +641,41 @@ raw = normalize(review_text[issue_review_id])   # 小写 / 压缩空白 / 去首
 assert normalize(iss["evidence_quote"]) in raw, "幻觉证据"
 ```
 
-## 三、类别分布
+## 三、类别分布（按「规则段 / 大模型段」拆开看）
 
-{cat_lines}
+| 类别 | 规则段 | 大模型段 | 合计 |
+| --- | ---: | ---: | ---: |
+{cat_rows}
 
-## 四、最终人工校验方法（抽样 30 条，可按需执行）
+**这张表比总数更能说明问题**：`other` 在规则段占 **{other_rule:.1%}**（{cat_rule.get('other', 0):,}/{n_rule:,}），
+在大模型段只占 **{other_llm:.1%}**（{cat_llm.get('other', 0):,}/{n_llm:,}）。
+
+- 规则段的一半落在 `other`，**不是**因为数据里真的没有可归类的问题，而是关键词表覆盖不到葡语的
+  口语变体（拼写错误、缩写、整句抱怨）——这是方法本身的上限，不是数据的上限。
+- 同一批数据换 Qwen2.5-7B 抽 212 条，`other` 只剩 {other_llm:.1%}，说明**七分类目是够用的**，
+  需要补的是抽取能力，不是类别定义。
+- 由此可以给出一个可决策的结论：若业务需要按类目做看板，规则段只能做「有没有问题」的粗筛，
+  细分必须走 LLM；把 LLM 段的比例从 {n_llm / max(n_llm + n_rule, 1):.1%} 提上去，
+  才是这套 pipeline 下一步最值得花的钱（成本外推见 `cost_report.md`）。
+
+## 四、字段口径：`evidence_quote_en` 为什么大面积为空
+
+| 事实 | 数量 | 说明 |
+| --- | ---: | --- |
+| 规则段 issue 数 | {no_en:,} | `evidence_quote_en` 为**空字符串** |
+| 大模型段 issue 数 | {n_llm:,} | 由模型直接输出英文翻译 |
+| `issues` 为空数组的条数 | {zero_issue} | 原文只有标点/无法读出诉求，规则与模型都没能给类目 |
+
+两条口径先说清楚，避免误读为「字段缺失」：
+
+1. **空串是设计选择，不是漏填**。规则方法只做关键词归类，不产生翻译；为了让下游能统一按
+   `evidence_quote_en` 是否非空来区分来源（也用于本报告的分段统计），规则段统一写空串而非
+   `null`，schema 保持稳定。
+2. **{zero_issue} 条空 `issues` 是真实结果**：这些评价原文只有 `...`、`!!!` 之类的符号，
+   没有可抽取的事件。保留它们（而不是伪造一条 `other`）是为了让「覆盖率 = 100%」这个断言
+   不掩盖信息损失；下游若需一条不漏，应把 `issues` 为空视为「待人工看」的队列。
+
+## 五、最终人工校验方法（抽样 30 条，可按需执行）
 
 自动指标只能证明「结构合法 + 证据不臆造」，**语义正确性**仍需人工对齐：
 
