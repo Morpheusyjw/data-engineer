@@ -660,7 +660,7 @@ python run_all.py             # 自动下载数据 → Q1→Q5 + Bonus
 | Q4.1 | `q4_llm_extraction/extract_reviews.py` | `extracted_issues.json`、`cost_report.md`、`accuracy_evaluation.md` | 14,447 条；真实大模型 US$0.0243；证据命中率 99.96% |
 | Q5.1 | — | `real_time_pipeline_design.md` | Kafka→Flink→ClickHouse/Redis，含架构图与成本量化 |
 | Q6.1 / Q6.2 | — | `bonus/*.md` | AI 协作反向分析 + 3 条数据驱动业务建议 |
-| 必填文档 | — | `REFLECTION.md` / `TOOLS.md` / `AI_LOG.md` | 自评表、工具实况、以及 3 个 bug 的发现与修复过程 |
+| 必填文档 | — | `REFLECTION.md` / `TOOLS.md` / `AI_LOG.md` / `AI_LOG_appendix.md` | 自评表、工具实况、AI 协作导读；附录是 91 条提问 / 472 条回复的逐字稿（已脱敏） |
 
 ## 📊 关键数字（本机实跑，可复现）
 
