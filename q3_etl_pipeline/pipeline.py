@@ -199,16 +199,23 @@ def build_returns_log(df: pd.DataFrame, sales: pd.DataFrame) -> pd.DataFrame:
 # 函数 5：校验输出（断言）
 # ----------------------------------------------------------------------------
 def validate_output(sales: pd.DataFrame, cust: pd.DataFrame, returns: pd.DataFrame) -> None:
-    """对每个输出做关键字段断言，保证数据可信。"""
+    """对每个输出做关键字段断言，保证数据可信。共 10 条，任一条不满足即中止、不写出产物。"""
     log.info("校验输出 ...")
+    # —— sales_facts：4 条 ——
     assert (sales["total_amount"] > 0).all(), "sales_facts 存在非正金额"
     assert sales["quantity"].min() > 0, "sales_facts 存在非正数量"
+    assert pd.api.types.is_datetime64_any_dtype(sales["invoice_date"]), "invoice_date 不是 datetime"
+    _cid = sales["customer_id"].dropna()
+    assert _cid.map(type).eq(str).all() if len(_cid) else True, "customer_id 非空值不是字符串"
+    # —— customer_features：4 条 ——
     assert cust["recency_days"].min() >= 0, "recency_days 出现负值"
     assert (cust["frequency"] >= 1).all(), "frequency 应 >=1"
     assert (cust["monetary"] > 0).all(), "monetary 应 >0"
+    assert cust["customer_id"].is_unique, "customer_id 应唯一（每客户一行）"
+    # —— returns_log：2 条 ——
     assert (returns["quantity"] < 0).all(), "returns_log 应为负数量"
-    # 匹配字段允许为空，但类型应为字符串/对象
-    log.info("✅ 全部断言通过")
+    assert len(returns) > 0, "returns_log 为空，说明匹配/筛选逻辑写错了"
+    log.info("✅ 10 条断言全部通过")
 
 
 # ----------------------------------------------------------------------------

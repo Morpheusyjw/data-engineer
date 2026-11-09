@@ -1,0 +1,24 @@
+# ============================================================
+# 精确版本锁定（本机实测通过，Python 3.13.12 / macOS）
+# ------------------------------------------------------------
+# 用途：需要「完全复现」时使用，版本号来自 `pip freeze`：
+#   pip install -r requirements.lock.txt
+#
+# 与 requirements.txt 的分工：
+#   - requirements.txt   → 兼容下限（>=），在 Python 3.10–3.13 上都能装上
+#   - requirements.lock.txt → 实测精确版本（==），用于逐位复现本文档中的数字
+#
+# 注意：pandas 3.x / numpy 2.x 需要 Python >= 3.11。若你的环境是 3.10，
+#       请改用 requirements.txt（下限模式），代码本身兼容 3.10+。
+# ============================================================
+
+pandas==3.1.1
+numpy==2.5.4
+pyarrow==26.0.1
+SQLAlchemy==2.1.8
+PyMySQL==1.2.3
+kagglehub==1.0.3
+openai==3.46.0
+python-dotenv==1.2.4
+tqdm==4.70.1
+tabulate==0.10.0

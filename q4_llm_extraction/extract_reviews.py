@@ -603,6 +603,10 @@ def _write_accuracy_report(results: list[dict], review_text: dict[str, str] | No
 | └ 规则段命中率 | {hit_rule:.2%}（{checked_rule:,} 条参与校验） |
 | 非空但未命中 | {miss_llm + miss_rule} 条｜大模型段 {miss_llm} / 规则段 {miss_rule} |
 
+> **口径说明**：`实际参与校验` 只统计「证据非空 **且** 能取到非空原文」的 issue。
+> 本次另有 {issues_total - quote_missing - quote_checked} 条因原文归一化后为空（纯符号如 `...`、`!!!`）未计入分母——
+> 这类评价没有可校验的文本，计入分母只会让命中率虚高。
+
 「非空但未命中」的 {miss_llm + miss_rule} 条**几乎全部来自大模型段**（{checked_llm:,} 条里 {miss_llm} 条未命中），
 规则段命中率 {hit_rule:.2%}。原因很直接：规则方法是**直接从原文切片**当证据，天然是真子串；
 而大模型偶发把葡语原文改写/顺译成等价表达（语义没错，但不再是逐字原文），

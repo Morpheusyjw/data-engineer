@@ -4,7 +4,9 @@
 # 安装方式（建议在虚拟环境中）：
 #   python -m venv .venv && source .venv/bin/activate   (Windows: .venv\Scripts\activate)
 #   pip install -r requirements.txt
-# 版本号采用 ">= 下限" 形式，兼顾可复现性与兼容性；如需完全冻结可加 pip freeze。
+# 版本号采用 ">= 下限" 形式，兼容 Python 3.10–3.13；
+# 需要逐位复现本仓库文档中的数字时，改用精确锁定版本：
+#   pip install -r requirements.lock.txt   （实测版本，见该文件说明）
 # ============================================================
 
 # ---- 数据处理核心 ----
