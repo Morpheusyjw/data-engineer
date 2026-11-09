@@ -1,5 +1,10 @@
 # 数据工程师笔试题
 
+> **提交者：杨婧雯** ｜ 1696098596@qq.com ｜ 2026-11-09 ｜ 仓库：本 fork（`Morpheusyjw/data-engineer`）
+>
+> 本文件是**官方题目原文**（原样保留，便于按题号对照）。
+> 我的解答落点、60 秒复现方式、关键数字与"最值得看的 3 处"，见**文末「📎 交付索引」**。
+
 > **总分**：100 分 + 加分题 15 分
 > 
 > **数据集**：
@@ -620,4 +625,65 @@ Olist 当前的数据是离线 CSV 导出。现在业务需求是——卖家希
 祝好运 ✨
 
 ---
+
+# 📎 交付索引（候选人：杨婧雯）
+
+> 上面是官方题目原文；这一节是我的解答落点，方便按需跳转。
+
+## ⚡ 60 秒复现
+
+```bash
+git clone https://github.com/Morpheusyjw/data-engineer && cd data-engineer
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env          # 只改 MYSQL_PASSWORD；OPENAI_API_KEY 可留空
+python run_all.py             # 自动下载数据 → Q1→Q5 + Bonus
+```
+
+- **数据**：`download_data.py` 用 kagglehub **匿名**下载两份数据集（Online Retail II ~90MB / Olist ~42MB），
+  失败时回退公开镜像——**不需要 Kaggle 账号**。
+- **数据库**：需要 MySQL 8.0。已有则 `mysql.server start`；没有可用 `docker compose up -d`（见 `docker-compose.yml`，
+  账号与 `.env.example` 默认值一致：root/root）。
+- **LLM**：不填 Key 时 Q4 自动降级为规则方法，全流程照样跑完并产出 14,447 条；
+  填任意 OpenAI 兼容 Key 即切真实大模型（本次提交用的是 SiliconFlow + Qwen2.5-7B）。
+- **单模块**：`python q1_data_quality/q1_code.py` / `python q3_etl_pipeline/pipeline.py` / `python q4_llm_extraction/extract_reviews.py` …
+
+## 🗺️ 仓库地图
+
+| 题 | 代码 | 产出 | 一句话结论 |
+|---|---|---|---|
+| Q1.1 | `q1_data_quality/q1_code.py` | `data_quality_report.md` | 106.7 万行 × 8 列，报出 6 个反直觉现象 |
+| Q1.2 | 同上 | `findings.md` | 4 个问题全部「动态算数 + 支持代码」，不是写死结论 |
+| Q1.3 | — | `cleaning_strategy.md` | 按 A/B/C 三种用途分层，并写明「不该删什么」 |
+| Q2.1–2.4 | `q2_sql_analysis/*.sql`、`run_q2.py` | `q2_results.md` | 9 表灌 MySQL 8.0；定位 2 个缺翻译类目 + JOIN 行膨胀 |
+| Q3.1 | `q3_etl_pipeline/pipeline.py` | `validation_report.md` | 星型模型 + RFM；退货匹配 34.98%，3 条断言自检 |
+| Q4.1 | `q4_llm_extraction/extract_reviews.py` | `extracted_issues.json`、`cost_report.md`、`accuracy_evaluation.md` | 14,447 条；真实大模型 US$0.0243；证据命中率 99.96% |
+| Q5.1 | — | `real_time_pipeline_design.md` | Kafka→Flink→ClickHouse/Redis，含架构图与成本量化 |
+| Q6.1 / Q6.2 | — | `bonus/*.md` | AI 协作反向分析 + 3 条数据驱动业务建议 |
+| 必填文档 | — | `REFLECTION.md` / `TOOLS.md` / `AI_LOG.md` | 自评表、工具实况、以及 3 个 bug 的发现与修复过程 |
+
+## 📊 关键数字（本机实跑，可复现）
+
+| 指标 | 数值 |
+|---|---|
+| Q1 输入规模 | 1,067,371 行 × 8 列（与 Kaggle 官方行数一致） |
+| Q3 真实销售行数 / GMV | 1,036,876 行 / £20,108,979 |
+| Q3 退货匹配 | 19,493 行中命中 6,819 行（34.98%），未命中主因是匿名客户无 `CustomerID` |
+| Q4 抽取条数 | 14,447 条，结构非法 0 条（与输入行数严格相等，内置硬断言） |
+| Q4 真实 LLM 覆盖 | 174 条走 Qwen2.5-7B，余额走规则方法 |
+| Q4 成本 | 67 次调用，US$0.0243（预算 US$3） |
+| Q4 证据防幻觉命中率 | 99.96%（规则段 100% / 大模型段 96.70%，差异已归因） |
+| 提交历史 | 按模块拆分的多次 commit（每个模块独立提交，见仓库提交记录） |
+
+## 🔍 我认为最值得看的 3 处
+
+1. **「跑通了，但结果是错的」**——Q4 产物 14,444 条，输入应为 14,447 条。差 3 条不是数据问题：模型某批返回空数组时，
+   旧代码直接采用模型返回，整批静默丢失。改为「按输入逐条回填 + 写文件前硬断言条数相等」。
+   **少 3 条和少 3000 条是同一类 bug，只是后者更容易被发现。**（`AI_LOG.md` 对话 3）
+2. **「评审能不能跑起来」也是交付质量的一部分**——我在干净目录 `git clone` 后实跑 `python run_all.py`，
+   发现 Olist 因数据集 slug 拼写错误（`brazilianecommerce`）被 Kaggle 返回 403，
+   评审会直接卡死在 Q2/Q4。修正 slug + 增加公开镜像兜底后，**无需任何 Kaggle 账号即可从 0 跑通**。
+3. **成本与边界**——Q4 用「规则分流 + 抽样 + 批量」把 1.4 万条的成本压到 2 美分；
+   `REFLECTION.md` 里另写了这套方案**在什么规模下会先崩**（内存、串行调用、单机 MySQL），以及我会怎么改。
+
 

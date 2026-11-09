@@ -64,9 +64,15 @@ def _ascii_safe(exc) -> str:
 
 
 def ollama_available(host: str = "http://localhost:11434") -> bool:
-    """探测本地 Ollama 服务是否可用（零 Key 真实大模型通道）。"""
+    """探测本地 Ollama 服务是否可用（零 Key 真实大模型通道）。
+
+    探测 localhost 时**显式绕过系统代理**：环境里若有 HTTP_PROXY/HTTPS_PROXY，
+    对本地端口的请求会先交给代理再失败（实测多 0.1~0.2 秒；某些代理配置会一直等到超时），
+    而探测本机服务本来就不该走代理。
+    """
     try:
-        with urllib.request.urlopen(host + "/api/tags", timeout=3) as r:
+        opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+        with opener.open(host + "/api/tags", timeout=1.5) as r:
             return r.status == 200
     except Exception:
         return False
@@ -97,6 +103,28 @@ def _is_trivial(text: str) -> bool:
     # 仅由少数笼统负面词构成
     generic = {"ruim", "pessimo", "péssimo", "horrivel", "horrível", "odio", "odeio", "não gostei"}
     return t in generic
+
+
+# 模板里常见的人肉占位符，一旦出现就认为「用户还没填 key」
+_PLACEHOLDER_MARKERS = ("你的", "xxx", "your", "填这", "changeme", "placeholder", "todo")
+
+
+def _looks_like_real_key(key: str | None) -> bool:
+    """判断 OPENAI_API_KEY 是不是一个「真的 key」。
+
+    背景：`.env.example` 里的占位符是 `sk-你的key填这里`，它同样以 `sk-` 开头。
+    如果只判断前缀，评审照抄模板后脚本会拿假 key 去请求上千次、每次失败再降级，
+    本来 1 秒的规则路径会拖成二十多分钟。所以这里额外做两项检查：
+      1. 不含占位词（中文占位/xxx/your…）；
+      2. `sk-` 之后是长度 ≥20 的纯可见 ASCII（真实 key 一定满足）。
+    """
+    if not key or not key.startswith("sk-"):
+        return False
+    low = key.lower()
+    if any(m in low for m in _PLACEHOLDER_MARKERS):
+        return False
+    body = key[3:]
+    return len(body) >= 20 and all(33 <= ord(ch) <= 126 for ch in body)
 
 
 # ---------------------------------------------------------------------------
@@ -190,6 +218,9 @@ def run() -> int:
     except Exception as _env_exc:  # noqa: BLE001
         log.warning("读取 .env 失败，改用系统环境变量：%s", _ascii_safe(_env_exc))
     api_key = os.getenv("OPENAI_API_KEY")
+    if api_key and not _looks_like_real_key(api_key):
+        log.warning("OPENAI_API_KEY 看起来是模板占位符（不是有效 key），跳过 LLM 通道，直接走规则方法。")
+        api_key = None
     cost_acc = {
         "prompt_tokens": 0, "completion_tokens": 0, "calls": 0,
         "mode": "rule-based", "model": os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
@@ -205,7 +236,7 @@ def run() -> int:
 
     client = None
     use_json_mode = True
-    if api_key and api_key.startswith("sk-"):
+    if _looks_like_real_key(api_key):
         try:
             from openai import OpenAI
             client = OpenAI(api_key=api_key, timeout=45, max_retries=0)

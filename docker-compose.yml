@@ -1,0 +1,40 @@
+# ============================================================
+# 可选：用 Docker 起一个 MySQL 8.0，省去本机安装
+# ------------------------------------------------------------
+# 用法：
+#   docker compose up -d      # 启动（首次会拉镜像）
+#   docker compose down       # 停止（数据保留在卷里）
+#   docker compose down -v    # 连数据一起删
+#
+# 账号与 .env.example 的默认值保持一致（root / root），
+# 因此 `cp .env.example .env` 之后直接 `python run_all.py` 即可。
+# 若本机已有 MySQL 占用 3306，请先停掉本机实例，或把下面 ports 改成 "3307:3306"
+# 并同步修改 .env 里的 MYSQL_PORT。
+# ============================================================
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: de-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: olist
+      TZ: Asia/Shanghai
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      # 让 pymysql 这类非 SSL 客户端能直接连接（对应 REFLECTION 里记的认证插件坑）
+      - --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  mysql-data:
